@@ -39,9 +39,10 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
- [scroller setScrollEnabled:YES];
- [scroller setContentSize:CGSizeMake(2000, 320)];
- [super viewDidLoad];
+    [super viewDidLoad];
+    [scroller setScrollEnabled:YES];
+    [scroller setContentSize:CGSizeMake(2000, 320)];
+ 
 }
 
 
