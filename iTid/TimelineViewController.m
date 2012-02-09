@@ -36,6 +36,10 @@
 }
 
 
+- (void)viewDidAppear:(BOOL)animated{
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+
 - (void)viewDidUnload
 {
     
