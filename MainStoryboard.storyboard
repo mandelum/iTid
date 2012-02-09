@@ -30,7 +30,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGP-0W-aK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController wantsFullScreenLayout="YES" id="F5x-xh-QlZ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="redraw" id="RDD-Bk-b4k">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" image="menybg.png" id="Qaa-gS-1BH">
@@ -176,6 +176,10 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scroller" destination="ZlL-wF-z9S" id="fIe-PR-2tB"/>
+                        <outlet property="view" destination="BYb-h6-gjj" id="hka-KI-qeP"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="346" y="101"/>
@@ -2409,8 +2413,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <segue reference="bN5-ic-Ppg"/>
         <segue reference="up9-Ob-gJb"/>
         <segue reference="prT-ML-b40"/>
-        <segue reference="WBG-Cb-cRw"/>
         <segue reference="EK4-r0-ASv"/>
         <segue reference="tZI-zB-gE4"/>
+        <segue reference="Lpr-EY-XYz"/>
     </inferredMetricsTieBreakers>
 </document>
