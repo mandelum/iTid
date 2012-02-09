@@ -2392,6 +2392,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="TimelineViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimelineViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+            </relationships>
         </class>
         <class className="WeekdayPickerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WeekdayPickerViewController.h"/>
@@ -2403,14 +2406,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="up9-Ob-gJb"/>
         <segue reference="bN5-ic-Ppg"/>
-<<<<<<< HEAD
-        <segue reference="Lpr-EY-XYz"/>
-=======
-        <segue reference="WBG-Cb-cRw"/>
->>>>>>> parent of ed435c6... Assigned a scrollview function to UIScrollView
+        <segue reference="up9-Ob-gJb"/>
         <segue reference="prT-ML-b40"/>
+        <segue reference="WBG-Cb-cRw"/>
         <segue reference="EK4-r0-ASv"/>
         <segue reference="tZI-zB-gE4"/>
     </inferredMetricsTieBreakers>
