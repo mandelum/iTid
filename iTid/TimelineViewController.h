@@ -6,6 +6,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimelineViewController : UIViewController
+@interface TimelineViewController : UIViewController {
+        
+    IBOutlet UIScrollView *scroller;
+}
+@property (nonatomic, retain) UIImageView *imageView;
 
 @end
