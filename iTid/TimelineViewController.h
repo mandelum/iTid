@@ -7,5 +7,9 @@
 #import <UIKit/UIKit.h>
 
 @interface TimelineViewController : UIViewController
+{
+    IBOutlet UIScrollView *scroller;
+}
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
