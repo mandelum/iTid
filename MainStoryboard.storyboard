@@ -28,7 +28,7 @@
         <scene sceneID="qSR-dU-SP8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGP-0W-aK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController wantsFullScreenLayout="YES" id="F5x-xh-QlZ" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController title="Menu" wantsFullScreenLayout="YES" id="F5x-xh-QlZ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="redraw" id="RDD-Bk-b4k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -176,13 +176,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="scroller" destination="ZlL-wF-z9S" id="hAE-1F-QnV"/>
-                        <outlet property="view" destination="BYb-h6-gjj" id="v5X-B8-lvL"/>
-                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="346" y="101"/>
+            <point key="canvasLocation" x="292" y="64"/>
         </scene>
         <scene sceneID="XrM-Pv-RF7">
             <objects>
@@ -2344,6 +2340,63 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="tvätta_händer_steg4.png" width="567" height="567"/>
         <image name="tvätta_händer_steg6.png" width="567" height="567"/>
     </resources>
+    <classes>
+        <class className="ActivitesListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivitesListViewController.h"/>
+        </class>
+        <class className="ActivityPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityPickerViewController.h"/>
+        </class>
+        <class className="BackgroundPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundPickerViewController.h"/>
+        </class>
+        <class className="CalendarSyncViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CalendarSyncViewController.h"/>
+        </class>
+        <class className="ColorPickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorPickerViewController.h"/>
+        </class>
+        <class className="EditActivityViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditActivityViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="delete:"/>
+                <relationship kind="outlet" name="EndSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="EndingTailSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="NameOfActivity" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="PreperationSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="FontPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FontPickerViewController.h"/>
+        </class>
+        <class className="GalleryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GalleryViewController.h"/>
+        </class>
+        <class className="GeneralSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneralSettingsViewController.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+        </class>
+        <class className="SoundPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SoundPickerViewController.h"/>
+        </class>
+        <class className="StepsSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsSettingsViewController.h"/>
+        </class>
+        <class className="StepsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsViewController.h"/>
+        </class>
+        <class className="TimePickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimePickerViewController.h"/>
+        </class>
+        <class className="TimelineViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimelineViewController.h"/>
+        </class>
+        <class className="WeekdayPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeekdayPickerViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -2352,9 +2405,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <inferredMetricsTieBreakers>
         <segue reference="bN5-ic-Ppg"/>
         <segue reference="up9-Ob-gJb"/>
+        <segue reference="Lpr-EY-XYz"/>
         <segue reference="prT-ML-b40"/>
         <segue reference="EK4-r0-ASv"/>
         <segue reference="tZI-zB-gE4"/>
-        <segue reference="Lpr-EY-XYz"/>
     </inferredMetricsTieBreakers>
 </document>
