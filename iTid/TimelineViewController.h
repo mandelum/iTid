@@ -9,7 +9,9 @@
 @interface TimelineViewController : UIViewController {
         
     IBOutlet UIScrollView *scroller;
+    
 }
-@property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic,retain) UIImageView *imageView;
+
 
 @end

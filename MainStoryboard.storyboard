@@ -165,6 +165,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -177,8 +178,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="scroller" destination="ZlL-wF-z9S" id="fIe-PR-2tB"/>
-                        <outlet property="view" destination="BYb-h6-gjj" id="hka-KI-qeP"/>
+                        <outlet property="scroller" destination="ZlL-wF-z9S" id="3J7-jf-cgW"/>
+                        <outlet property="view" destination="BYb-h6-gjj" id="ftI-E6-coK"/>
                     </connections>
                 </viewController>
             </objects>
