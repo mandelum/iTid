@@ -3,7 +3,6 @@
 //  iTid
 //
 //  Created by Robin Brandt on 2012-02-08.
-//  Copyright (c) 2012 Hypno Abstract. All rights reserved.
 //  Testing adding a comment, and another one...
 
 #import "MenuViewController.h"
