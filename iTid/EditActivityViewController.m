@@ -7,6 +7,9 @@
 #import "EditActivityViewController.h"
 
 @implementation EditActivityViewController
+@synthesize PreperationSwitch = _PreperationSwitch;
+@synthesize EndSwitch = _EndSwitch;
+@synthesize EndingTailSwitch = _EndingTailSwitch;
 @synthesize NameOfActivity = _NameOfActivity;
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -21,6 +24,9 @@
 }
 - (void)viewDidUnload {
     [self setNameOfActivity:nil];
+    [self setPreperationSwitch:nil];
+    [self setEndSwitch:nil];
+    [self setEndingTailSwitch:nil];
     [super viewDidUnload];
 }
 

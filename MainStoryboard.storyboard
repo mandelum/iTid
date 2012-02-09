@@ -2284,7 +2284,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </tableView>
                     <navigationItem key="navigationItem" title="Aktivitet" id="Nn1-ux-Kik"/>
                     <connections>
+                        <outlet property="EndSwitch" destination="j6w-TY-qN9" id="tCS-mT-2br"/>
+                        <outlet property="EndingTailSwitch" destination="oNL-f0-rCD" id="xbq-Qg-s7d"/>
                         <outlet property="NameOfActivity" destination="rMR-SC-v3t" id="Leg-LH-5Ib"/>
+                        <outlet property="PreperationSwitch" destination="7SQ-4z-lVX" id="hFH-6P-LHi"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -2357,7 +2360,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditActivityViewController.h"/>
             <relationships>
                 <relationship kind="action" name="delete:"/>
+                <relationship kind="outlet" name="EndSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="EndingTailSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="NameOfActivity" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="PreperationSwitch" candidateClass="UISwitch"/>
             </relationships>
         </class>
         <class className="FontPickerViewController" superclassName="UITableViewController">
@@ -2401,7 +2407,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <segue reference="bN5-ic-Ppg"/>
         <segue reference="WBG-Cb-cRw"/>
         <segue reference="prT-ML-b40"/>
-        <segue reference="p7v-Ek-c4b"/>
+        <segue reference="EK4-r0-ASv"/>
         <segue reference="tZI-zB-gE4"/>
     </inferredMetricsTieBreakers>
 </document>
