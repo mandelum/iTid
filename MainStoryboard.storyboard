@@ -2291,7 +2291,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="EndSwitch" destination="j6w-TY-qN9" id="tCS-mT-2br"/>
                         <outlet property="EndingTailSwitch" destination="oNL-f0-rCD" id="xbq-Qg-s7d"/>
                         <outlet property="NameOfActivity" destination="rMR-SC-v3t" id="Leg-LH-5Ib"/>
-                        <outlet property="PreperationSwitch" destination="7SQ-4z-lVX" id="hFH-6P-LHi"/>
+                        <outlet property="PreparationSwitch" destination="7SQ-4z-lVX" id="uce-ef-AaR"/>
                     </connections>
                 </tableViewController>
             </objects>

@@ -8,7 +8,7 @@
 
 @interface EditActivityViewController : UITableViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *NameOfActivity;
-@property (weak, nonatomic) IBOutlet UISwitch *PreperationSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *PreparationSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *EndSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *EndingTailSwitch;
 
