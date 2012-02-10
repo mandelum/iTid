@@ -165,6 +165,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -429,6 +430,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="698" y="-533"/>
@@ -510,6 +512,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Typsnitt" id="d9c-AO-B70"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1872" y="-541"/>
@@ -651,6 +654,10 @@
                     <navigationItem key="navigationItem" title="Bakgrunder" id="nx3-sU-TzO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xzZ-WG-0SM"/>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="image1" destination="7BW-ab-RIY" id="3SC-RP-vvM"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1114" y="-533"/>
@@ -2352,6 +2359,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="BackgroundPickerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundPickerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="CalendarSyncViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CalendarSyncViewController.h"/>

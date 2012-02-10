@@ -53,6 +53,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [super viewDidAppear:animated];
 }
 

@@ -6,6 +6,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BackgroundPickerViewController : UITableViewController
+@interface BackgroundPickerViewController : UITableViewController {
+    
+    IBOutlet UIImageView *imageView;
+    
 
+}
 @end
