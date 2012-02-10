@@ -7,7 +7,9 @@
 #import "TimelineViewController.h"
 
 @implementation TimelineViewController
-@synthesize imageView = _imageView;
+@synthesize TimelineScrollView = _TimelineScrollView;
+@synthesize TimelineBackground = _TimelineBackground;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,20 +30,20 @@
 
 #pragma mark - View lifecycle
 
-
+/*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
 }
-
+*/
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(2000, 320)];
+    //[self.TimelineScrollView setScrollEnabled:YES];
+    [self.TimelineScrollView setContentSize:CGSizeMake(1000, 320)];
  
 }
 
@@ -49,9 +51,8 @@
 - (void)viewDidUnload
 {
     
-
-
-    [self setImageView:nil];
+    [self setTimelineScrollView:nil];
+    [self setTimelineBackground:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
