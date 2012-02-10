@@ -7,7 +7,6 @@
 #import "TimelineViewController.h"
 
 @implementation TimelineViewController
-@synthesize imageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,11 +27,19 @@
 
 #pragma mark - View lifecycle
 
+<<<<<<< HEAD
 //*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 //- (void)loadView
 //{
 //}
+=======
+
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
+- (void)loadView
+{
+}
+>>>>>>> d9516a4f2b2ecd453631aa216619eac29193d348
 
 
 
