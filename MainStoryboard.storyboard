@@ -28,7 +28,7 @@
         <scene sceneID="qSR-dU-SP8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGP-0W-aK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController wantsFullScreenLayout="YES" id="F5x-xh-QlZ" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController title="MenuStart" wantsFullScreenLayout="YES" id="F5x-xh-QlZ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="redraw" id="RDD-Bk-b4k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -116,7 +116,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-586" y="-94"/>
+            <point key="canvasLocation" x="-588" y="-96"/>
         </scene>
         <scene sceneID="zfw-A1-m2h">
             <objects>
@@ -178,12 +178,12 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="scroller" destination="ZlL-wF-z9S" id="3J7-jf-cgW"/>
-                        <outlet property="view" destination="BYb-h6-gjj" id="ftI-E6-coK"/>
+                        <outlet property="imageView" destination="qMV-fx-f6b" id="gqx-bY-auG"/>
+                        <outlet property="scroller" destination="ZlL-wF-z9S" id="RK6-Q7-X1W"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="346" y="101"/>
+            <point key="canvasLocation" x="292" y="64"/>
         </scene>
         <scene sceneID="XrM-Pv-RF7">
             <objects>
@@ -2354,11 +2354,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bN5-ic-Ppg"/>
         <segue reference="up9-Ob-gJb"/>
-        <segue reference="Lpr-EY-XYz"/>
+        <segue reference="bN5-ic-Ppg"/>
         <segue reference="prT-ML-b40"/>
         <segue reference="EK4-r0-ASv"/>
         <segue reference="tZI-zB-gE4"/>
+        <segue reference="Lpr-EY-XYz"/>
     </inferredMetricsTieBreakers>
 </document>

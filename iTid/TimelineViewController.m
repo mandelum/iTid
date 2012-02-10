@@ -28,11 +28,21 @@
 
 #pragma mark - View lifecycle
 
+//*
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
+//- (void)loadView
+//{
+//}
 
-- (void)viewDidLoad{
-    [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(1000, 320)];
+
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    [scroller setScrollEnabled:YES];
+    [scroller setContentSize:CGSizeMake(2000, 320)];
+ 
 }
 
 
@@ -45,6 +55,7 @@
     
 
 
+    [self setImageView:nil];
     [super viewDidUnload];
 }
 
