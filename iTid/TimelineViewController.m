@@ -7,6 +7,7 @@
 #import "TimelineViewController.h"
 
 @implementation TimelineViewController
+@synthesize imageView = _imageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
