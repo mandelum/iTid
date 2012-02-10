@@ -30,7 +30,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGP-0W-aK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="MenuStart" wantsFullScreenLayout="YES" id="F5x-xh-QlZ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="redraw" id="RDD-Bk-b4k">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" image="menybg.png" id="Qaa-gS-1BH">
@@ -656,6 +656,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xzZ-WG-0SM"/>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="image1" destination="7BW-ab-RIY" id="3SC-RP-vvM"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1114" y="-533"/>
@@ -2348,8 +2351,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="tvätta_händer_steg4.png" width="567" height="567"/>
         <image name="tvätta_händer_steg6.png" width="567" height="567"/>
     </resources>
-<<<<<<< HEAD
-=======
     <classes>
         <class className="ActivitesListViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivitesListViewController.h"/>
@@ -2359,6 +2360,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="BackgroundPickerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundPickerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="CalendarSyncViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CalendarSyncViewController.h"/>
@@ -2411,17 +2415,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WeekdayPickerViewController.h"/>
         </class>
     </classes>
->>>>>>> d9516a4f2b2ecd453631aa216619eac29193d348
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="up9-Ob-gJb"/>
         <segue reference="bN5-ic-Ppg"/>
+        <segue reference="up9-Ob-gJb"/>
+        <segue reference="Lpr-EY-XYz"/>
         <segue reference="prT-ML-b40"/>
-        <segue reference="WBG-Cb-cRw"/>
         <segue reference="EK4-r0-ASv"/>
         <segue reference="tZI-zB-gE4"/>
     </inferredMetricsTieBreakers>

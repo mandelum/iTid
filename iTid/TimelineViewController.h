@@ -9,13 +9,7 @@
 @interface TimelineViewController : UIViewController
 {
     IBOutlet UIScrollView *scroller;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> d9516a4f2b2ecd453631aa216619eac29193d348
-=======
->>>>>>> d9516a4f2b2ecd453631aa216619eac29193d348
+
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

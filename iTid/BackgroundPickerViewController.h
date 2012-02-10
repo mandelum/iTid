@@ -8,8 +8,8 @@
 
 @interface BackgroundPickerViewController : UITableViewController {
     
-
+    IBOutlet UIImageView *imageView;
+    
 
 }
-
 @end
