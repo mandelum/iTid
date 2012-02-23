@@ -51,6 +51,14 @@
 		8ABD5A8A14E2CD8600C87395 /* ActivityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD5A8814E2CD8600C87395 /* ActivityPickerViewController.m */; };
 		8ABD5A8D14E2CDC500C87395 /* StepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD5A8C14E2CDC500C87395 /* StepsViewController.m */; };
 		8ABD5A8E14E2CDC500C87395 /* StepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD5A8C14E2CDC500C87395 /* StepsViewController.m */; };
+		8ACA295114F6C3AB00BC6768 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA295014F6C3AB00BC6768 /* CoreDataTableViewController.m */; };
+		8ACA295214F6C3AB00BC6768 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA295014F6C3AB00BC6768 /* CoreDataTableViewController.m */; };
+		8ACA296114F6C3FB00BC6768 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296014F6C3FB00BC6768 /* Activity.m */; };
+		8ACA296214F6C3FB00BC6768 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296014F6C3FB00BC6768 /* Activity.m */; };
+		8ACA296514F6C3FD00BC6768 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296414F6C3FC00BC6768 /* Sound.m */; };
+		8ACA296614F6C3FD00BC6768 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296414F6C3FC00BC6768 /* Sound.m */; };
+		8ACA296914F6C3FE00BC6768 /* Weekdays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296814F6C3FD00BC6768 /* Weekdays.m */; };
+		8ACA296A14F6C3FE00BC6768 /* Weekdays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296814F6C3FD00BC6768 /* Weekdays.m */; };
 		8AFB558414E2BA36007990F7 /* EditActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558314E2BA36007990F7 /* EditActivityViewController.m */; };
 		8AFB558514E2BA36007990F7 /* EditActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558314E2BA36007990F7 /* EditActivityViewController.m */; };
 		8AFB558914E2BB1B007990F7 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558814E2BB1B007990F7 /* MenuViewController.m */; };
@@ -179,6 +187,14 @@
 		8ABD5A8814E2CD8600C87395 /* ActivityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityPickerViewController.m; sourceTree = "<group>"; };
 		8ABD5A8B14E2CDC500C87395 /* StepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepsViewController.h; sourceTree = "<group>"; };
 		8ABD5A8C14E2CDC500C87395 /* StepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepsViewController.m; sourceTree = "<group>"; };
+		8ACA294F14F6C3AB00BC6768 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		8ACA295014F6C3AB00BC6768 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		8ACA295F14F6C3FB00BC6768 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		8ACA296014F6C3FB00BC6768 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		8ACA296314F6C3FC00BC6768 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		8ACA296414F6C3FC00BC6768 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		8ACA296714F6C3FD00BC6768 /* Weekdays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weekdays.h; sourceTree = "<group>"; };
+		8ACA296814F6C3FD00BC6768 /* Weekdays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weekdays.m; sourceTree = "<group>"; };
 		8AFB558214E2BA36007990F7 /* EditActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditActivityViewController.h; sourceTree = "<group>"; };
 		8AFB558314E2BA36007990F7 /* EditActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditActivityViewController.m; sourceTree = "<group>"; };
 		8AFB558714E2BB1B007990F7 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -505,9 +521,17 @@
 		8ABD5A5114E2C05F00C87395 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8ACA294F14F6C3AB00BC6768 /* CoreDataTableViewController.h */,
+				8ACA295014F6C3AB00BC6768 /* CoreDataTableViewController.m */,
 				8ABD5A5E14E2CA1900C87395 /* iTidBrain.h */,
 				8ABD5A5F14E2CA1900C87395 /* iTidBrain.m */,
 				8AB5680314E2B47B00FAC119 /* iTid.xcdatamodeld */,
+				8ACA296714F6C3FD00BC6768 /* Weekdays.h */,
+				8ACA296814F6C3FD00BC6768 /* Weekdays.m */,
+				8ACA296314F6C3FC00BC6768 /* Sound.h */,
+				8ACA296414F6C3FC00BC6768 /* Sound.m */,
+				8ACA295F14F6C3FB00BC6768 /* Activity.h */,
+				8ACA296014F6C3FB00BC6768 /* Activity.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -657,7 +681,7 @@
 		8AB567E214E2B47B00FAC119 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Hypno Abstract";
 			};
 			buildConfigurationList = 8AB567E514E2B47B00FAC119 /* Build configuration list for PBXProject "iTid" */;
@@ -802,6 +826,10 @@
 				8ABD5A8414E2CD4500C87395 /* CalendarSyncViewController.m in Sources */,
 				8ABD5A8914E2CD8600C87395 /* ActivityPickerViewController.m in Sources */,
 				8ABD5A8D14E2CDC500C87395 /* StepsViewController.m in Sources */,
+				8ACA295114F6C3AB00BC6768 /* CoreDataTableViewController.m in Sources */,
+				8ACA296114F6C3FB00BC6768 /* Activity.m in Sources */,
+				8ACA296514F6C3FD00BC6768 /* Sound.m in Sources */,
+				8ACA296914F6C3FE00BC6768 /* Weekdays.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +855,10 @@
 				8ABD5A8514E2CD4500C87395 /* CalendarSyncViewController.m in Sources */,
 				8ABD5A8A14E2CD8600C87395 /* ActivityPickerViewController.m in Sources */,
 				8ABD5A8E14E2CDC500C87395 /* StepsViewController.m in Sources */,
+				8ACA295214F6C3AB00BC6768 /* CoreDataTableViewController.m in Sources */,
+				8ACA296214F6C3FB00BC6768 /* Activity.m in Sources */,
+				8ACA296614F6C3FD00BC6768 /* Sound.m in Sources */,
+				8ACA296A14F6C3FE00BC6768 /* Weekdays.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

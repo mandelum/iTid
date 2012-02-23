@@ -2,6 +2,47 @@
 <Bucket
    type = "1"
    version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "iTid/ColorPickerViewController.h"
+         timestampString = "351704326.760921"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "10"
+         endingLineNumber = "10"
+         landmarkName = "@interface ColorPickerViewController"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "iTid/EditActivityViewController.m"
+         timestampString = "351717272.031464"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "16"
+         endingLineNumber = "16"
+         landmarkName = "-textFieldShouldReturn:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "iTid/EditActivityViewController.m"
+         timestampString = "351717276.955034"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "@implementation EditActivityViewController"
+         landmarkType = "3">
+      </FileBreakpoint>
+   </FileBreakpoints>
    <ExceptionBreakpoints>
       <ExceptionBreakpoint
          shouldBeEnabled = "Yes"

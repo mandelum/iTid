@@ -19,6 +19,13 @@
 - (IBAction)delete:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)save:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES]e
+}
+- (IBAction)cancel:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES]e
+    
+}
 - (void)viewDidLoad {
     self.NameOfActivity.delegate = self;
 }
@@ -29,5 +36,19 @@
     [self setEndingTailSwitch:nil];
     [super viewDidUnload];
 }
+    //
+    //Prepare for seque 
+    //bakåt, där all info committas
+    //
+
+    //Implement Delegate methods that get´s called in their prepareforseque
+    //Icon GalleryPicker sends back the correct icon url or database identifier
+    //SoundPicker sends back it´s chosen soundtitle/identifier
+    //ColorPicker that sends it´s color value
+    //Step-Sequence-Picker that sends back an NSArray of steps
+    //TimePicker sends a time and a BOOL if alarm is on/off
+    //WeekdayPicker sends back 
+    //
+    
 
 @end

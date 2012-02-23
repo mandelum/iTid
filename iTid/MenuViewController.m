@@ -8,6 +8,7 @@
 #import "MenuViewController.h"
 
 @implementation MenuViewController
+@synthesize timeToNextActivity;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,10 +46,12 @@
 
 - (void)viewDidUnload
 {
+    [self setTimeToNextActivity:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 
 - (void)viewDidAppear:(BOOL)animated{
     [[UIApplication sharedApplication] setStatusBarHidden:NO];

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="F5x-xh-QlZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2177" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="F5x-xh-QlZ">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1173"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller - Inställningar-->
         <scene sceneID="fGI-WN-SN4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C69-LD-Jde" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,6 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-192" y="-806"/>
         </scene>
+        <!--Menu View Controller - MenuStart-->
         <scene sceneID="qSR-dU-SP8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGP-0W-aK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,10 +116,14 @@
                     <navigationItem key="navigationItem" title="Meny" id="yOI-NP-HyD"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="timeToNextActivity" destination="AG8-1j-w4z" id="clj-d6-EAD"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-588" y="-96"/>
         </scene>
+        <!--Timeline View Controller-->
         <scene sceneID="zfw-A1-m2h">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqZ-Wd-5hJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,6 +190,7 @@
             </objects>
             <point key="canvasLocation" x="292" y="64"/>
         </scene>
+        <!--General Settings View Controller - Inställningar-->
         <scene sceneID="XrM-Pv-RF7">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyl-84-CRx" sceneMemberID="firstResponder"/>
@@ -206,7 +213,7 @@
                                                     <rect key="frame" x="7" y="5" width="33" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Bakgrunder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mas-59-A3D">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Bakgrunder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Mas-59-A3D">
                                                     <rect key="frame" x="53" y="0.0" width="217" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -236,7 +243,7 @@
                                                     <rect key="frame" x="216" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Analog klocka" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dvj-Zb-JCs">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Analog klocka" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="dvj-Zb-JCs">
                                                     <rect key="frame" x="53" y="0.0" width="217" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -256,14 +263,14 @@
                                         <rect key="frame" x="0.0" y="121" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="jWz-Pj-Jiq">
                                                     <rect key="frame" x="215" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Digital klocka" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B8d-b6-xU2">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Digital klocka" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="B8d-b6-xU2">
                                                     <rect key="frame" x="51" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -294,7 +301,7 @@
                                                     <rect key="frame" x="216" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="htm-R2-U9u">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="htm-R2-U9u">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -310,17 +317,17 @@
                                         <rect key="frame" x="0.0" y="231" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Typsnitt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oFF-FT-snr">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Typsnitt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="oFF-FT-snr">
                                                     <rect key="frame" x="10" y="11" width="67" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Helvetica Neue Condesed Bold" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wx7-yA-FAd">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Helvetica Neue Condesed Bold" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Wx7-yA-FAd">
                                                     <rect key="frame" x="83" y="11" width="187" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
@@ -350,7 +357,7 @@
                                                     <rect key="frame" x="216" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Tillåt scrolling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fNw-go-Mqi">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Tillåt scrolling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="fNw-go-Mqi">
                                                     <rect key="frame" x="53" y="0.0" width="217" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -403,7 +410,7 @@
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Genvägar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nIk-PM-GDF">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Genvägar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="nIk-PM-GDF">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -435,6 +442,7 @@
             </objects>
             <point key="canvasLocation" x="698" y="-533"/>
         </scene>
+        <!--Font Picker View Controller - Typsnitt-->
         <scene sceneID="XoB-ND-zNl">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7f-I0-3Bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -453,7 +461,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Helvetica Neue Condensed Bold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qxv-wh-Y5w">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Helvetica Neue Condensed Bold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Qxv-wh-Y5w">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
@@ -472,7 +480,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Futura Condesed ExtraBold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="48X-Ns-Zg3">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Futura Condesed ExtraBold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="48X-Ns-Zg3">
                                                     <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
@@ -491,7 +499,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Didot Bold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PzP-q5-705">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Didot Bold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="PzP-q5-705">
                                                     <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
@@ -517,6 +525,7 @@
             </objects>
             <point key="canvasLocation" x="1872" y="-541"/>
         </scene>
+        <!--Background Picker View Controller - Bakgrunder-->
         <scene sceneID="9uc-Md-kyF">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBN-6W-RP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -535,7 +544,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FLQ-jj-pGb">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" id="FLQ-jj-pGb">
                                                     <rect key="frame" x="156" y="0.0" width="154" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -558,7 +567,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8vb-Gq-ZVd">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="8vb-Gq-ZVd">
                                                     <rect key="frame" x="310" y="0.0" width="166" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -581,7 +590,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o9u-yW-iWT">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="o9u-yW-iWT">
                                                     <rect key="frame" x="310" y="0.0" width="166" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -604,7 +613,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pDn-i4-hSd">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="pDn-i4-hSd">
                                                     <rect key="frame" x="310" y="0.0" width="166" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -627,7 +636,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QuU-Ox-y87">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="QuU-Ox-y87">
                                                     <rect key="frame" x="310" y="0.0" width="166" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -662,6 +671,7 @@
             </objects>
             <point key="canvasLocation" x="1114" y="-533"/>
         </scene>
+        <!--Calendar Sync View Controller - Kalender Sync-->
         <scene sceneID="hyl-Y8-2Gd">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfc-yA-FDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -680,14 +690,14 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Epost" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ADK-hA-5zK">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Epost" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="ADK-hA-5zK">
                                                     <rect key="frame" x="10" y="15" width="67" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.32156862745098042" green="0.40000000000000002" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="klas@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lUT-N2-9sf">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="klas@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="lUT-N2-9sf">
                                                     <rect key="frame" x="83" y="12" width="119" height="19"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -703,17 +713,17 @@
                                         <rect key="frame" x="0.0" y="55" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Lösenord" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cUy-oz-JeT">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Lösenord" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="cUy-oz-JeT">
                                                     <rect key="frame" x="10" y="15" width="67" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.32156862745098042" green="0.40000000000000002" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="*********************" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xIK-uW-7fy">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="*********************" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="xIK-uW-7fy">
                                                     <rect key="frame" x="83" y="12" width="123" height="19"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -738,12 +748,13 @@
             </objects>
             <point key="canvasLocation" x="2263" y="-541"/>
         </scene>
+        <!--Weekday Picker View Controller-->
         <scene sceneID="s81-3G-lO4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v81-NH-OGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="OZV-8r-7uv" customClass="WeekdayPickerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jOA-Ak-ldz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -756,7 +767,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Måndag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Pt-5h-rdi">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Måndag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="8Pt-5h-rdi">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -775,7 +786,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Tisdag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p35-h6-EcJ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Tisdag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="p35-h6-EcJ">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -794,7 +805,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Onsdag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j4a-Xb-fD5">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Onsdag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="j4a-Xb-fD5">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -813,7 +824,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Torsdag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpO-jQ-M9R">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Torsdag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="VpO-jQ-M9R">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -832,7 +843,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Fredag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PLn-J0-fTZ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Fredag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="PLn-J0-fTZ">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -851,7 +862,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Lördag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IPs-l4-Uli">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Lördag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="IPs-l4-Uli">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -870,7 +881,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Söndag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6B3-HU-fVk">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Söndag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="6B3-HU-fVk">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -893,14 +904,15 @@
                     <navigationItem key="navigationItem" id="bdU-H0-9dP"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="2263" y="-1109"/>
+            <point key="canvasLocation" x="2401" y="-1109"/>
         </scene>
+        <!--Steps Settings View Controller - Steg för steg redigering-->
         <scene sceneID="LPV-j3-i22">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pre-eW-lkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Twc-Lw-12H" customClass="StepsSettingsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="C2P-ia-EHt">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -913,7 +925,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Kom ihåg pengarna" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYs-0E-AOU">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Kom ihåg pengarna" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="vYs-0E-AOU">
                                                     <rect key="frame" x="109" y="0.0" width="201" height="99"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -936,7 +948,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Gå ut ur dörren" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QIG-bZ-GAi">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Gå ut ur dörren" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="QIG-bZ-GAi">
                                                     <rect key="frame" x="109" y="0.0" width="201" height="99"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -959,7 +971,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Gå till bussen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ggZ-Fp-hHQ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Gå till bussen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="ggZ-Fp-hHQ">
                                                     <rect key="frame" x="109" y="0.0" width="201" height="99"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -982,7 +994,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Vänta ett litet tag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OpW-J8-TyM">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Vänta ett litet tag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="OpW-J8-TyM">
                                                     <rect key="frame" x="109" y="0.0" width="201" height="99"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1005,7 +1017,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Stig på bussen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="irC-Mt-6Cw">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Stig på bussen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="irC-Mt-6Cw">
                                                     <rect key="frame" x="109" y="0.0" width="201" height="99"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1028,7 +1040,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Lägg till ett steg här..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="To5-oM-KCC">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Lägg till ett steg här..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="To5-oM-KCC">
                                                     <rect key="frame" x="10" y="0.0" width="267" height="99"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1063,16 +1075,17 @@
             </objects>
             <point key="canvasLocation" x="1491" y="-1691"/>
         </scene>
+        <!--Color Picker View Controller - Välj Aktivitetsfärg-->
         <scene sceneID="QGk-bq-LIx">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1w-XI-Wee" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1ef-yk-0YM" customClass="ColorPickerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5xC-aq-ps0">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="color picker.png" id="Y2o-xD-irC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -1083,12 +1096,13 @@
             </objects>
             <point key="canvasLocation" x="665" y="-1691"/>
         </scene>
+        <!--Sound Picker View Controller - Ljud-->
         <scene sceneID="9qk-Hf-5TB">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUi-vp-htM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vvh-xE-jiJ" customClass="SoundPickerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="YBi-8R-brh">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1101,7 +1115,7 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Inget" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rBJ-N1-Uwf">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Inget" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="rBJ-N1-Uwf">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1124,7 +1138,7 @@
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Brum Brum !!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bHq-Mg-PcF">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Brum Brum !!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="bHq-Mg-PcF">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1140,10 +1154,10 @@
                                         <rect key="frame" x="0.0" y="121" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Tuuuut tuuuut" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cbt-Zt-Syy">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Tuuuut tuuuut" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="cbt-Zt-Syy">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1159,10 +1173,10 @@
                                         <rect key="frame" x="0.0" y="165" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Wooowwawiiwawowa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SNk-Y6-677">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Wooowwawiiwawowa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="SNk-Y6-677">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -1187,12 +1201,13 @@
             </objects>
             <point key="canvasLocation" x="2263" y="-1691"/>
         </scene>
+        <!--Time Picker View Controller - Tidpunkt-->
         <scene sceneID="DcF-IA-xbN">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLA-Bj-7id" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="pUr-2d-Bh6" customClass="TimePickerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="en1-Rv-ace">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <datePicker key="tableHeaderView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="dLt-Ab-Wx9">
@@ -1261,42 +1276,43 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Tidpunkt" id="npC-Lq-qF2"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1872" y="-1109"/>
+            <point key="canvasLocation" x="2010" y="-1109"/>
         </scene>
+        <!--Gallery View Controller - Aktivitetsikoner-->
         <scene sceneID="MVg-wn-VNX">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWZ-gd-5aG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="7d8-GE-vhI" customClass="GalleryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VtP-c4-qFM">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="5r8-3z-mrO">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arbete.png" id="Dx5-nO-WtL">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dusch.png" id="tlb-ua-kAd">
-                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="buss.png" id="eLs-8i-H3O">
-                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett.png" id="9gZ-cE-z67">
-                                        <rect key="frame" x="0.0" y="108" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="108" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mote.png" id="46L-Fm-9aU">
-                                        <rect key="frame" x="220" y="108" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="108" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="frukost_middag_kvell.png" id="pdA-an-dF0">
-                                        <rect key="frame" x="110" y="108" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="108" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
@@ -1311,6 +1327,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1127" y="-1691"/>
         </scene>
+        <!--Activity Picker View Controller - Aktiviteter-->
         <scene sceneID="ROH-Ea-VY5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBV-E2-ZIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1329,14 +1346,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Dusch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BaI-ZO-tpa">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Dusch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="BaI-ZO-tpa">
                                                     <rect key="frame" x="134" y="49" width="56" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z1g-y1-sdI">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="z1g-y1-sdI">
                                                     <rect key="frame" x="134" y="71" width="36" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1359,14 +1376,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Frukost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Si-3M-Tge">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Frukost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="7Si-3M-Tge">
                                                     <rect key="frame" x="134" y="49" width="67" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AJi-L4-7it">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="AJi-L4-7it">
                                                     <rect key="frame" x="134" y="71" width="36" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1389,14 +1406,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Bussen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6hd-Nj-4kI">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Bussen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="6hd-Nj-4kI">
                                                     <rect key="frame" x="134" y="49" width="66" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="10:20 med larm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kiM-7e-RvI">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="10:20 med larm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="kiM-7e-RvI">
                                                     <rect key="frame" x="134" y="71" width="98" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1422,14 +1439,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Arbete" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dZ7-23-pPy">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Arbete" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="dZ7-23-pPy">
                                                     <rect key="frame" x="134" y="49" width="58" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="11:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IIH-He-35P">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="11:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="IIH-He-35P">
                                                     <rect key="frame" x="134" y="71" width="36" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1452,14 +1469,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Toa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kD4-vl-Hwo">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Toa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="kD4-vl-Hwo">
                                                     <rect key="frame" x="112" y="31" width="33" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="11:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WML-qw-ani">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="11:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="WML-qw-ani">
                                                     <rect key="frame" x="112" y="53" width="36" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1494,6 +1511,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="653" y="619"/>
         </scene>
+        <!--Steps View Controller-->
         <scene sceneID="asE-On-qaz">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKJ-5D-9hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1550,6 +1568,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1053" y="619"/>
         </scene>
+        <!--Navigation Controller - Aktiviteter-->
         <scene sceneID="NFQ-0G-5su">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iae-KP-vuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1568,6 +1587,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="273" y="-1101"/>
         </scene>
+        <!--Navigation Controller - Inställningar-->
         <scene sceneID="qKr-1g-AGh">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9i-bE-4Td" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1586,64 +1606,65 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="273" y="-533"/>
         </scene>
+        <!--Gallery View Controller - Steg för steg pictogram-->
         <scene sceneID="v0M-dt-mn7">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSn-je-N0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bYZ-Oe-bjt" customClass="GalleryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fP-5y-26e">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="qev-04-nX6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg1.png" id="cxH-j6-IQA">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg3.png" id="GMX-gj-3TQ">
-                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg2.png" id="vin-OC-E10">
-                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg4.png" id="p8E-m7-fD0">
-                                        <rect key="frame" x="0.0" y="108" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="108" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="kläder_steg5.png" id="imS-E4-jrJ">
-                                        <rect key="frame" x="220" y="108" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="108" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett_steg4.png" id="nSi-mf-9MJ">
-                                        <rect key="frame" x="110" y="108" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="108" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg6.png" id="0Up-Ix-XoO">
-                                        <rect key="frame" x="0.0" y="216" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="216" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett_steg2.png" id="tAp-sP-Pht">
-                                        <rect key="frame" x="220" y="216" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="216" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett_steg1.png" id="mqg-z5-FWR">
-                                        <rect key="frame" x="110" y="216" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="216" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tvätta_händer_steg1.png" id="wqx-3x-x37">
-                                        <rect key="frame" x="0.0" y="324" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="324" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tvätta_händer_steg6.png" id="xqa-g5-TJ7">
-                                        <rect key="frame" x="220" y="324" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="324" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tvätta_händer_steg4.png" id="jER-Ih-eL5">
-                                        <rect key="frame" x="110" y="324" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="324" width="100" height="149"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
@@ -1658,6 +1679,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1872" y="-1691"/>
         </scene>
+        <!--Navigation Controller - Redigera Aktiviteter-->
         <scene sceneID="dHh-iq-r7D">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z83-RK-TE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1676,6 +1698,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="237" y="619"/>
         </scene>
+        <!--Steps View Controller-->
         <scene sceneID="jka-vU-GBM">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Au-kh-BGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1732,173 +1755,51 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1053" y="51"/>
         </scene>
+        <!--Activites List View Controller - Aktiviteter-->
         <scene sceneID="cAI-cP-2gm">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4A-Hg-5ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="JH6-uN-r76" customClass="ActivitesListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="U0K-S3-Spe">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="U0K-S3-Spe">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="yta-Tr-HLa">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eA8-mp-SND" detailTextLabel="FLA-FD-3iw" imageView="BvR-Ov-DYa" rowHeight="84" style="IBUITableViewCellStyleSubtitle" id="jmQ-cM-nNC">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Activity Cell" textLabel="eA8-mp-SND" detailTextLabel="FLA-FD-3iw" imageView="BvR-Ov-DYa" rowHeight="84" style="IBUITableViewCellStyleSubtitle" id="jmQ-cM-nNC">
+                                <rect key="frame" x="0.0" y="22" width="320" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Dusch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="eA8-mp-SND">
+                                            <rect key="frame" x="93" y="22" width="56" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Dusch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eA8-mp-SND">
-                                                    <rect key="frame" x="93" y="22" width="56" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FLA-FD-3iw">
-                                                    <rect key="frame" x="93" y="44" width="36" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="dusch.png" id="BvR-Ov-DYa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="U6S-qp-iCv" detailTextLabel="KmT-zD-Rva" imageView="PIk-kt-vpR" rowHeight="84" style="IBUITableViewCellStyleSubtitle" id="Kmx-Kt-fUu">
-                                        <rect key="frame" x="0.0" y="84" width="320" height="84"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="FLA-FD-3iw">
+                                            <rect key="frame" x="93" y="44" width="36" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Frukost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U6S-qp-iCv">
-                                                    <rect key="frame" x="93" y="22" width="67" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KmT-zD-Rva">
-                                                    <rect key="frame" x="93" y="44" width="36" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="frukost_middag_kvell.png" id="PIk-kt-vpR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dtE-zf-Vyb" detailTextLabel="YvA-dd-XUJ" imageView="iYV-bB-llW" rowHeight="84" style="IBUITableViewCellStyleSubtitle" id="tKY-cV-eoZ">
-                                        <rect key="frame" x="0.0" y="168" width="320" height="84"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="dusch.png" id="BvR-Ov-DYa">
+                                            <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Bussen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dtE-zf-Vyb">
-                                                    <rect key="frame" x="93" y="22" width="66" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="10:20 med larm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YvA-dd-XUJ">
-                                                    <rect key="frame" x="93" y="44" width="98" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="buss.png" id="iYV-bB-llW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="xml-7O-weW" kind="push" id="ki5-GW-XPQ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="D9i-js-5J2" detailTextLabel="62d-uF-Z1D" imageView="XA4-TZ-ffA" rowHeight="84" style="IBUITableViewCellStyleSubtitle" id="PcR-T5-3cp">
-                                        <rect key="frame" x="0.0" y="252" width="320" height="84"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Arbete" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D9i-js-5J2">
-                                                    <rect key="frame" x="93" y="22" width="58" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="11:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="62d-uF-Z1D">
-                                                    <rect key="frame" x="93" y="44" width="36" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="arbete.png" id="XA4-TZ-ffA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3oD-eU-wJ1" detailTextLabel="nfr-Wg-VHA" imageView="oOj-Ji-kbh" rowHeight="84" style="IBUITableViewCellStyleSubtitle" id="shR-x8-NFa">
-                                        <rect key="frame" x="0.0" y="336" width="320" height="84"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Toa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3oD-eU-wJ1">
-                                                    <rect key="frame" x="93" y="22" width="33" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="11:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nfr-Wg-VHA">
-                                                    <rect key="frame" x="93" y="44" width="36" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="toalett.png" id="oOj-Ji-kbh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="P3Q-Ex-8QB" kind="modal" id="LTN-uj-odU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="JH6-uN-r76" id="g7T-D3-N0y"/>
                             <outlet property="delegate" destination="JH6-uN-r76" id="qwV-eQ-8pI"/>
@@ -1912,7 +1813,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AU9-Of-Lef">
                             <connections>
-                                <segue destination="xml-7O-weW" kind="push" id="prT-ML-b40"/>
+                                <segue destination="P3Q-Ex-8QB" kind="modal" id="prT-ML-b40"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1920,12 +1821,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="673" y="-1101"/>
         </scene>
+        <!--Edit Activity View Controller - Aktivitet-->
         <scene sceneID="M1S-QL-26G">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkB-2B-pxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="xml-7O-weW" customClass="EditActivityViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="0j8-BX-sNi">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1944,7 +1846,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Namn" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jde-d0-X9T">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Namn" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Jde-d0-X9T">
                                                     <rect key="frame" x="12" y="16" width="67" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -1960,10 +1862,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="55" width="320" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="83"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Ikon / Bild" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9EN-Vm-OZi">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Ikon / Bild" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="9EN-Vm-OZi">
                                                     <rect key="frame" x="93" y="0.0" width="177" height="83"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -1986,17 +1888,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="139" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Ljud" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Woa-Ia-Bkb">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Ljud" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Woa-Ia-Bkb">
                                                     <rect key="frame" x="10" y="11" width="36" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Brum   Brum !!!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Djc-D0-f3P">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Brum   Brum !!!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Djc-D0-f3P">
                                                     <rect key="frame" x="155" y="11" width="115" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2015,17 +1917,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="183" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W3T-Ur-DLo">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="W3T-Ur-DLo">
                                                     <rect key="frame" x="10" y="11" width="35" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="OOOOOOOOO" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="90U-QG-mZV">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="OOOOOOOOO" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="90U-QG-mZV">
                                                     <rect key="frame" x="150" y="11" width="120" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2052,7 +1954,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Steg för steg instruktioner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VZe-j0-eLd">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Steg för steg instruktioner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="VZe-j0-eLd">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -2078,14 +1980,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Förberedning" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XOR-qn-Ztn">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Förberedning" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="XOR-qn-Ztn">
                                                     <rect key="frame" x="75" y="1" width="116" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:15" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XJz-Fu-0YS">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:15" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" id="XJz-Fu-0YS">
                                                     <rect key="frame" x="75" y="23" width="71" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2112,17 +2014,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="359" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q57-6B-gif">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Q57-6B-gif">
                                                     <rect key="frame" x="75" y="1" width="42" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:20 med Larm" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x4w-S6-gUZ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:20 med Larm" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" id="x4w-S6-gUZ">
                                                     <rect key="frame" x="75" y="23" width="103" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2145,17 +2047,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="403" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Slut" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tUw-aa-4r2">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Slut" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="tUw-aa-4r2">
                                                     <rect key="frame" x="75" y="1" width="34" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="10:40" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HeD-cK-Za2">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="10:40" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" id="HeD-cK-Za2">
                                                     <rect key="frame" x="75" y="23" width="36" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2182,17 +2084,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="447" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Aveckling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="41c-xI-k3t">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Aveckling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="41c-xI-k3t">
                                                     <rect key="frame" x="75" y="1" width="86" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="10:45" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ISe-rC-06Z">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="10:45" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" id="ISe-rC-06Z">
                                                     <rect key="frame" x="75" y="23" width="36" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2226,14 +2128,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Dessa dagar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qbM-9f-vTu">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Dessa dagar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="qbM-9f-vTu">
                                                     <rect key="frame" x="10" y="2" width="108" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Varje dag" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VZT-tp-pKQ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Varje dag" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" id="VZT-tp-pKQ">
                                                     <rect key="frame" x="10" y="24" width="60" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2292,7 +2194,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="xml-7O-weW" id="cvq-wT-95Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Aktivitet" id="Nn1-ux-Kik"/>
+                    <navigationItem key="navigationItem" title="Aktivitet" id="Nn1-ux-Kik">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CrD-y4-Xho">
+                            <connections>
+                                <action selector="cancel:" destination="xml-7O-weW" id="LLQ-5t-6xj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5WQ-G3-hVJ">
+                            <connections>
+                                <action selector="save:" destination="xml-7O-weW" id="Pho-ft-Sco"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="EndSwitch" destination="j6w-TY-qN9" id="tCS-mT-2br"/>
                         <outlet property="EndingTailSwitch" destination="oNL-f0-rCD" id="xbq-Qg-s7d"/>
@@ -2300,6 +2213,24 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="PreparationSwitch" destination="7SQ-4z-lVX" id="uce-ef-AaR"/>
                     </connections>
                 </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1531" y="-1109"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DHf-Z6-WZp">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdE-O6-Fvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="P3Q-Ex-8QB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Kwg-bw-QZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xml-7O-weW" kind="relationship" relationship="rootViewController" id="cmc-Nc-NTs"/>
+                    </connections>
+                </navigationController>
             </objects>
             <point key="canvasLocation" x="1145" y="-1109"/>
         </scene>
@@ -2351,7 +2282,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="tvätta_händer_steg6.png" width="567" height="567"/>
     </resources>
     <classes>
-        <class className="ActivitesListViewController" superclassName="UITableViewController">
+        <class className="ActivitesListViewController" superclassName="CoreDataTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivitesListViewController.h"/>
         </class>
         <class className="ActivityPickerViewController" superclassName="UITableViewController">
@@ -2368,6 +2299,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="ColorPickerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorPickerViewController.h"/>
+        </class>
+        <class className="CoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
         </class>
         <class className="EditActivityViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditActivityViewController.h"/>
@@ -2390,6 +2324,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="MenuViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="timeToNextActivity" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="SoundPickerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SoundPickerViewController.h"/>
@@ -2421,7 +2358,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="bN5-ic-Ppg"/>
+        <segue reference="up9-Ob-gJb"/>
         <segue reference="prT-ML-b40"/>
+        <segue reference="WBG-Cb-cRw"/>
         <segue reference="p7v-Ek-c4b"/>
         <segue reference="tZI-zB-gE4"/>
     </inferredMetricsTieBreakers>

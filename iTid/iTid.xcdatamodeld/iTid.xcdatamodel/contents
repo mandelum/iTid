@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1170" systemVersion="11D50b" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sound" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Sound" inverseName="activity" inverseEntity="Sound" syncable="YES"/>
+        <relationship name="weekdays" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Weekdays" inverseName="activity" inverseEntity="Weekdays" syncable="YES"/>
+    </entity>
+    <entity name="Sound" representedClassName="Sound" syncable="YES">
+        <attribute name="sounddataurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="sound" inverseEntity="Activity" syncable="YES"/>
+    </entity>
+    <entity name="Weekdays" representedClassName="Weekdays" syncable="YES">
+        <attribute name="weekdays" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="weekdays" inverseEntity="Activity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Activity" positionX="-3240" positionY="-564" width="128" height="90"/>
+        <element name="Sound" positionX="-2999" positionY="-594" width="128" height="90"/>
+        <element name="Weekdays" positionX="-3105" positionY="-540" width="128" height="45"/>
+    </elements>
 </model>

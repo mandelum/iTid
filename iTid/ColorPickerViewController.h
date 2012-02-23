@@ -7,5 +7,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ColorPickerViewController : UIViewController
-
+    //RSColorPicker
 @end
