@@ -32,6 +32,7 @@
 }
 
 - (IBAction)delete:(id)sender {
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)save:(id)sender {
@@ -54,6 +55,12 @@
         
 }
 - (IBAction)cancel:(id)sender {
+    if ([self.title isEqualToString:@"Ny Aktivitet"])
+        {
+        [self.activity.managedObjectContext deleteObject:self.activity];
+        
+        }
+    
     [self.navigationController popViewControllerAnimated:YES];
     //[self.navigationController dismissModalViewControllerAnimated:YES];
 }
@@ -63,6 +70,11 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:YES];
     [self setupActivity];
+    if ([self.title isEqualToString:@"Ny Aktivitet"])
+        {
+        [self.nameOfActivity becomeFirstResponder];
+        
+        }
 }
 - (void)viewDidUnload {
     [self setNameOfActivity:nil];

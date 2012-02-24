@@ -52,7 +52,8 @@
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Activity"];
     request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
-    // no predicate because we want ALL the Photographers
+    // Lägg till sort by date
+    // no predicate because we want ALL the Activites
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                         managedObjectContext:self.activityDataBase.managedObjectContext
@@ -63,6 +64,7 @@
 -(void)fillDatabaseWithDummyStuff:(UIManagedDocument *)document
 {
     [self.activityDataBase.managedObjectContext performBlock:^{
+        
         Activity *dummyActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
         dummyActivity.name = @"lol";
         NSLog(@"hej lol");
@@ -156,6 +158,8 @@
     // Configure the cell...
     Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = activity.name;
+    //Fixa bild
+    //Fixa tid(NSDate)
     return cell;
 }
 
@@ -174,10 +178,11 @@
 {
     
     
-
-    Activity *activity = nil;
-    EditActivityViewController *editView =  segue.destinationViewController;
     
+    
+    UIViewController *editView =  segue.destinationViewController;
+    if ([editView respondsToSelector:@selector(setActivity:)]) {
+    Activity *activity = nil;
     if ([segue.identifier isEqualToString:@"Edit Chosen Activity"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -202,13 +207,13 @@
              //playerDetailsViewController.delegate = self;
     }
     if ([segue.identifier isEqualToString:@"Add New Activity"]) {
-        EditActivityViewController *editView =  segue.destinationViewController;
         editView.title = @"Ny Aktivitet";
         activity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
         
     }
-    [editView setActivity:activity];
+    [editView performSelector:@selector(setActivity:) withObject:activity];
     ////[segue.destinationViewController performSelector:@selector(setPhotographer:) withObject:photographer];
+    }
 }
 
 @end
