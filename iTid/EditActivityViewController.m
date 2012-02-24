@@ -23,11 +23,12 @@
 {
     
 }
-- (void)setupActivity
+- (void)setActivity:(Activity *)activity
 {
     NSLog(@"%@", self.nameOfActivity.text);
-    NSLog(@"%@", self.activity.name);
-    self.nameOfActivity.text = self.activity.name;
+    NSLog(@"%@", activity.name);
+    _activity = activity;
+    self.nameOfActivity.text = activity.name;
     NSLog(@"%@", self.nameOfActivity.text);
 
 }
@@ -60,9 +61,8 @@
         NSLog(@"innuti ny aktivitet insertion");
         
         }
-    self.activity.name = self.nameOfActivity.text; 
-    NSError *error = nil;
-    [self.activity.managedObjectContext save:&error];
+    
+    self.activity.name = self.nameOfActivity.text;
     [self.delegate saveFrom:self withActivity:self.activity];
     [self.navigationController popViewControllerAnimated:YES];
         
@@ -79,10 +79,12 @@
 }
 - (void)viewDidLoad {
     self.nameOfActivity.delegate = self;
+    [self setActivity:self.activity];
+    
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:YES];
-    [self setupActivity];
+    
     if ([self.title isEqualToString:@"Ny Aktivitet"])
         {
         [self.nameOfActivity becomeFirstResponder];
