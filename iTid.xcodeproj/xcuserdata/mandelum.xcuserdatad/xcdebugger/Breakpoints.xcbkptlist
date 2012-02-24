@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iTid/EditActivityViewController.m"
-         timestampString = "351775867.143058"
+         timestampString = "351800480.824964"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "19"
-         endingLineNumber = "19"
+         startingLineNumber = "20"
+         endingLineNumber = "20"
          landmarkName = "-textFieldShouldReturn:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iTid/EditActivityViewController.m"
-         timestampString = "351798056.548127"
+         timestampString = "351800480.824964"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "87"
-         endingLineNumber = "87"
+         startingLineNumber = "88"
+         endingLineNumber = "88"
          landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,25 +47,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iTid/ActivitesListViewController.m"
-         timestampString = "351795931.123428"
+         timestampString = "351800656.31692"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "143"
-         endingLineNumber = "143"
+         startingLineNumber = "151"
+         endingLineNumber = "151"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "iTid/EditActivityViewController.m"
-         timestampString = "351798056.548127"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59"
-         landmarkName = "-save:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

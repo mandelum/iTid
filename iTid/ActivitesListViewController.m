@@ -11,6 +11,14 @@
 @implementation ActivitesListViewController
 @synthesize activityDataBase = _activityDataBase;
 
+-(void)saveFrom:(EditActivityViewController *)delegator withActivity:(Activity *)activity
+{
+     [self.activityDataBase saveToURL:self.activityDataBase.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:NULL];
+    
+    NSLog(@"save");
+}
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -167,25 +175,27 @@
     //UINavigationController *navView = segue.destinationViewController;
     //EditActivityViewController *editView = (EditActivityViewController *)navView.topViewController;
     //EditActivityViewController *editView = [navView.viewControllers objectAtIndex:0];
-    
-    UIViewController *editView =  segue.destinationViewController;
-    //behövs för att göra oss till delegat
-    //editView.delegate = self;
-    if ([editView respondsToSelector:@selector(setActivity:)]) {
+
         Activity *activity = nil;
+        EditActivityViewController *editView =  segue.destinationViewController;
+        //behövs för att göra oss till delegat
+        editView.delegate = self;
         if ([segue.identifier isEqualToString:@"Edit Chosen Activity"]) {
             NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
             activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
             editView.title = activity.name;
-            
+            editView.activity = activity;
+            //[editView performSelector:@selector(setActivity:) withObject:activity];
         }
         else if ([segue.identifier isEqualToString:@"Add New Activity"]) {
             editView.title = @"Ny Aktivitet";
             activity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+            editView.activity = activity;
             
         }
-        [editView performSelector:@selector(setActivity:) withObject:activity];
-    }
+        
+        
+    
 }
 
 @end

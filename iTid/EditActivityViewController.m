@@ -13,6 +13,7 @@
 @synthesize endingTailSwitch = _endingTailSwitch;
 @synthesize nameOfActivity = _nameOfActivity;
 @synthesize activity = _activity;
+@synthesize delegate = _delegate;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -35,8 +36,7 @@
 	if (buttonIndex == 0) {
 		[self.navigationController popViewControllerAnimated:YES];
         [self.activity.managedObjectContext deleteObject:self.activity];
-        NSError *error = nil;
-        [self.activity.managedObjectContext save:&error];
+        [self.delegate saveFrom:self withActivity:self.activity];
 	} else if (buttonIndex == 1) {
 		NSLog(@"cancel");
 	} 		
@@ -46,6 +46,7 @@
     UIActionSheet *popupQuery = [[UIActionSheet alloc] initWithTitle:@"Döda mig!!!" delegate:self cancelButtonTitle:@"kanske inte" destructiveButtonTitle:@"DÖÖÖÖD!!!" otherButtonTitles: nil];
 	popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
 	[popupQuery showInView:self.view];
+
     
 }
 
@@ -62,7 +63,7 @@
     self.activity.name = self.nameOfActivity.text; 
     NSError *error = nil;
     [self.activity.managedObjectContext save:&error];
-    //[self.delegate save:activity];
+    [self.delegate saveFrom:self withActivity:self.activity];
     [self.navigationController popViewControllerAnimated:YES];
         
 }
@@ -70,8 +71,8 @@
     if ([self.title isEqualToString:@"Ny Aktivitet"])
         {
         [self.activity.managedObjectContext deleteObject:self.activity];
-        NSError *error = nil;
-        [self.activity.managedObjectContext save:&error];
+        [self.delegate saveFrom:self withActivity:self.activity];
+
         }
     
     [self.navigationController popViewControllerAnimated:YES];

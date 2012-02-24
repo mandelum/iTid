@@ -6,7 +6,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataTableViewController.h"
-@interface ActivitesListViewController : CoreDataTableViewController
+#import "EditActivityViewController.h"
+@interface ActivitesListViewController : CoreDataTableViewController <EditActivityDelegate>
 @property (nonatomic, strong) UIManagedDocument *activityDataBase;
 
 @end
