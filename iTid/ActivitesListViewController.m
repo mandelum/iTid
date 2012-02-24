@@ -146,6 +146,7 @@
     cell.textLabel.text = activity.name;
     //Fixa bild
     //Fixa tid(NSDate)
+    //fixa cellstorleken
     return cell;
 }
 
@@ -161,44 +162,29 @@
 #pragma mark - Prepare for Seque
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
-{
-    
-    
-    
+{  
+    //metoder som kan behövas senare om vi använder modal viewcontrollers...
+    //UINavigationController *navView = segue.destinationViewController;
+    //EditActivityViewController *editView = (EditActivityViewController *)navView.topViewController;
+    //EditActivityViewController *editView = [navView.viewControllers objectAtIndex:0];
     
     UIViewController *editView =  segue.destinationViewController;
+    //behövs för att göra oss till delegat
+    //editView.delegate = self;
     if ([editView respondsToSelector:@selector(setActivity:)]) {
-    Activity *activity = nil;
-    if ([segue.identifier isEqualToString:@"Edit Chosen Activity"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        //UINavigationController *navView = segue.destinationViewController;
-        //EditActivityViewController *editView = (EditActivityViewController *)navView.topViewController;
-        //EditActivityViewController *editView = [navView.viewControllers objectAtIndex:0];
-        //NSLog(@"%@", editView);
-        
-        
-        editView.title = activity.name;
-    
-        
-        
-        //NSLog(@"joo");
-        //NSLog(@"%@", editView.nameOfActivity.text);
-//        if ([editView respondsToSelector:@selector(setNameOfActivity)]) {
-//            NSLog(@"jee");
-//            [editView performSelector:@selector(setNameOfActivity) withObject:activity.name];
-//        }
-
-        
-             //playerDetailsViewController.delegate = self;
-    }
-    if ([segue.identifier isEqualToString:@"Add New Activity"]) {
-        editView.title = @"Ny Aktivitet";
-        activity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
-        
-    }
-    [editView performSelector:@selector(setActivity:) withObject:activity];
-    ////[segue.destinationViewController performSelector:@selector(setPhotographer:) withObject:photographer];
+        Activity *activity = nil;
+        if ([segue.identifier isEqualToString:@"Edit Chosen Activity"]) {
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            editView.title = activity.name;
+            
+        }
+        else if ([segue.identifier isEqualToString:@"Add New Activity"]) {
+            editView.title = @"Ny Aktivitet";
+            activity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+            
+        }
+        [editView performSelector:@selector(setActivity:) withObject:activity];
     }
 }
 
