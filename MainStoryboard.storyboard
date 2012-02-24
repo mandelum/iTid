@@ -2204,13 +2204,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="up9-Ob-gJb"/>
         <segue reference="bN5-ic-Ppg"/>
         <segue reference="up9-Ob-gJb"/>
         <segue reference="Pvh-H2-lCK"/>
         <segue reference="0bh-FR-npQ"/>
         <segue reference="p7v-Ek-c4b"/>
         <segue reference="tZI-zB-gE4"/>
-        <segue reference="cfh-Iu-56S"/>
     </inferredMetricsTieBreakers>
 </document>
