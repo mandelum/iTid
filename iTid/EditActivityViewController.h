@@ -4,7 +4,7 @@
 //
 //  Created by Robin Brandt on 2012-01-31.
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 //#import "ActivitesListViewController.h"
 #import "Activity.h"
 @class EditActivityViewController;
@@ -22,7 +22,6 @@
 @property (weak, nonatomic) id <EditActivityDelegate> delegate;
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField;
--(void)setupActivity;
 -(IBAction)delete:(id)sender;
 
 

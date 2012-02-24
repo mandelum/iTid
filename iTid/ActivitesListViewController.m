@@ -40,6 +40,7 @@
 
 - (void)viewDidLoad
 {
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [super viewDidLoad];
 
 }
@@ -123,7 +124,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
     [super viewDidAppear:animated];
 }
 

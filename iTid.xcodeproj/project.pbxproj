@@ -334,8 +334,7 @@
 				8ABD5A4F14E2C01100C87395 /* App Delegate */,
 				8AB5682414E2B52700FAC119 /* MainStoryboard.storyboard */,
 				8ABD5A5014E2C04900C87395 /* Menu */,
-				8ABD5A4D14E2BFBA00C87395 /* Activites Settings */,
-				8ABD5A7314E2CB9400C87395 /* General Settings */,
+				8ABD5A7314E2CB9400C87395 /* Settings */,
 				8ABD5A4E14E2BFEB00C87395 /* Timeline */,
 				8ABD5A8614E2CD6A00C87395 /* Step-by-Step */,
 				8ABD5A5114E2C05F00C87395 /* Data */,
@@ -561,14 +560,14 @@
 			name = "Deep Detail Views";
 			sourceTree = "<group>";
 		};
-		8ABD5A7314E2CB9400C87395 /* General Settings */ = {
+		8ABD5A7314E2CB9400C87395 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				8ABD5A7414E2CBE100C87395 /* GeneralSettingsViewController.h */,
 				8ABD5A7514E2CBE100C87395 /* GeneralSettingsViewController.m */,
 				8ABD5A8114E2CD1500C87395 /* Detail Views */,
 			);
-			name = "General Settings";
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		8ABD5A8014E2CCAC00C87395 /* Detail Views */ = {
@@ -584,6 +583,7 @@
 		8ABD5A8114E2CD1500C87395 /* Detail Views */ = {
 			isa = PBXGroup;
 			children = (
+				8ABD5A4D14E2BFBA00C87395 /* Activites Settings */,
 				8ABD5A7814E2CBF600C87395 /* BackgroundPickerViewController.h */,
 				8ABD5A7914E2CBF600C87395 /* BackgroundPickerViewController.m */,
 				8ABD5A7C14E2CC8200C87395 /* FontPickerViewController.h */,

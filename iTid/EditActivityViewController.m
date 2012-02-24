@@ -78,19 +78,37 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    //self.clearsSelectionOnViewWillAppear = YES;
     self.nameOfActivity.delegate = self;
     [self setActivity:self.activity];
     
 }
 -(void)viewWillAppear:(BOOL)animated {
-    [super viewDidAppear:YES];
+    [super viewWillAppear:YES];
     
-    if ([self.title isEqualToString:@"Ny Aktivitet"])
+
+    if ([self.title isEqualToString:@"Ny Aktivitet"] && !self.nameOfActivity.text)
         {
         [self.nameOfActivity becomeFirstResponder];
         
         }
 }
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
 - (void)viewDidUnload {
     [self setNameOfActivity:nil];
     [self setPreparationSwitch:nil];
