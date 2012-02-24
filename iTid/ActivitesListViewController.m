@@ -5,7 +5,8 @@
 //  Created by Robin Brandt on 2012-02-08.
 
 #import "ActivitesListViewController.h"
-
+#import "Activity.h"
+#import "EditActivityViewController.h"
 
 @implementation ActivitesListViewController
 @synthesize activityDataBase = _activityDataBase;
@@ -47,6 +48,71 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)setupFetchedResultsController // attaches an NSFetchRequest to this UITableViewController
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Activity"];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
+    // no predicate because we want ALL the Photographers
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                        managedObjectContext:self.activityDataBase.managedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+}
+
+-(void)fillDatabaseWithDummyStuff:(UIManagedDocument *)document
+{
+    [self.activityDataBase.managedObjectContext performBlock:^{
+        Activity *dummyActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+        dummyActivity.name = @"lol";
+        NSLog(@"hej lol");
+        
+        
+    [self.activityDataBase saveToURL:self.activityDataBase.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:NULL];
+    
+    }];
+     
+//     [document.managedObjectContext performBlock:^{
+//        
+//        [document saveToURL:document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:NULL];
+//    }
+     
+}
+
+
+
+- (void)useDocument
+{
+    //NSLog(@"hej usedocument");       
+    //[self fillDatabaseWithDummyStuff:self.activityDataBase];      ???
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.activityDataBase.fileURL path]]) {
+        // does not exist on disk, so create it
+        [self.activityDataBase saveToURL:self.activityDataBase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
+            [self setupFetchedResultsController];
+            [self fillDatabaseWithDummyStuff:self.activityDataBase];
+            //[self fetchFlickrDataIntoDocument:self.photoDatabase];
+            
+        }];
+    } else if (self.activityDataBase.documentState == UIDocumentStateClosed) {
+        // exists on disk, but we need to open it
+        [self.activityDataBase openWithCompletionHandler:^(BOOL success) {
+            [self setupFetchedResultsController];
+        }];
+    } else if (self.activityDataBase.documentState == UIDocumentStateNormal) {
+        // already open and ready to use
+        [self setupFetchedResultsController];
+    }
+}
+
+- (void)setActivityDataBase:(UIManagedDocument *)activityDataBase
+{
+    if (_activityDataBase != activityDataBase) {
+        _activityDataBase = activityDataBase;
+        [self useDocument];
+    }
+}
+
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -78,20 +144,21 @@
 
 #pragma mark - Table view data source
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *CellIdentifier = @"Activity Cell";
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-//    }
-//    
-//    // Configure the cell...
-//    
-//    return cell;
-//}
-//
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Activity Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell...
+    Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = activity.name;
+    return cell;
+}
+
 
 
 #pragma mark - Table view delegate
@@ -105,9 +172,42 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
 {
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    //Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    //[segue.destinationViewController METHOD:ARGUMENT];
+    
+    
+
+    Activity *activity = nil;
+    EditActivityViewController *editView =  segue.destinationViewController;
+    
+    if ([segue.identifier isEqualToString:@"Edit Chosen Activity"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        //UINavigationController *navView = segue.destinationViewController;
+        //EditActivityViewController *editView = (EditActivityViewController *)navView.topViewController;
+        //EditActivityViewController *editView = [navView.viewControllers objectAtIndex:0];
+        //NSLog(@"%@", editView);
+        
+        
+        editView.title = activity.name;
+    
+        
+        
+        //NSLog(@"joo");
+        //NSLog(@"%@", editView.nameOfActivity.text);
+//        if ([editView respondsToSelector:@selector(setNameOfActivity)]) {
+//            NSLog(@"jee");
+//            [editView performSelector:@selector(setNameOfActivity) withObject:activity.name];
+//        }
+
+        
+             //playerDetailsViewController.delegate = self;
+    }
+    if ([segue.identifier isEqualToString:@"Add New Activity"]) {
+        EditActivityViewController *editView =  segue.destinationViewController;
+        editView.title = @"Ny Aktivitet";
+        activity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+        
+    }
+    [editView setActivity:activity];
     ////[segue.destinationViewController performSelector:@selector(setPhotographer:) withObject:photographer];
 }
 

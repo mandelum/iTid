@@ -754,7 +754,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v81-NH-OGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="OZV-8r-7uv" customClass="WeekdayPickerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jOA-Ak-ldz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -912,7 +912,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pre-eW-lkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Twc-Lw-12H" customClass="StepsSettingsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="C2P-ia-EHt">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1081,11 +1081,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1w-XI-Wee" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1ef-yk-0YM" customClass="ColorPickerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5xC-aq-ps0">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="color picker.png" id="Y2o-xD-irC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -1102,7 +1102,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUi-vp-htM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vvh-xE-jiJ" customClass="SoundPickerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="YBi-8R-brh">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1207,7 +1207,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLA-Bj-7id" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="pUr-2d-Bh6" customClass="TimePickerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="en1-Rv-ace">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <datePicker key="tableHeaderView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="dLt-Ab-Wx9">
@@ -1284,35 +1284,35 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWZ-gd-5aG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="7d8-GE-vhI" customClass="GalleryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VtP-c4-qFM">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="5r8-3z-mrO">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arbete.png" id="Dx5-nO-WtL">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="149"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dusch.png" id="tlb-ua-kAd">
-                                        <rect key="frame" x="220" y="0.0" width="100" height="149"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="buss.png" id="eLs-8i-H3O">
-                                        <rect key="frame" x="110" y="0.0" width="100" height="149"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett.png" id="9gZ-cE-z67">
-                                        <rect key="frame" x="0.0" y="108" width="100" height="149"/>
+                                        <rect key="frame" x="0.0" y="108" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mote.png" id="46L-Fm-9aU">
-                                        <rect key="frame" x="220" y="108" width="100" height="149"/>
+                                        <rect key="frame" x="220" y="108" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="frukost_middag_kvell.png" id="pdA-an-dF0">
-                                        <rect key="frame" x="110" y="108" width="100" height="149"/>
+                                        <rect key="frame" x="110" y="108" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
@@ -1612,59 +1612,59 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSn-je-N0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bYZ-Oe-bjt" customClass="GalleryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fP-5y-26e">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="qev-04-nX6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg1.png" id="cxH-j6-IQA">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="149"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg3.png" id="GMX-gj-3TQ">
-                                        <rect key="frame" x="220" y="0.0" width="100" height="149"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg2.png" id="vin-OC-E10">
-                                        <rect key="frame" x="110" y="0.0" width="100" height="149"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg4.png" id="p8E-m7-fD0">
-                                        <rect key="frame" x="0.0" y="108" width="100" height="149"/>
+                                        <rect key="frame" x="0.0" y="108" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="kläder_steg5.png" id="imS-E4-jrJ">
-                                        <rect key="frame" x="220" y="108" width="100" height="149"/>
+                                        <rect key="frame" x="220" y="108" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett_steg4.png" id="nSi-mf-9MJ">
-                                        <rect key="frame" x="110" y="108" width="100" height="149"/>
+                                        <rect key="frame" x="110" y="108" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tandborste_steg6.png" id="0Up-Ix-XoO">
-                                        <rect key="frame" x="0.0" y="216" width="100" height="149"/>
+                                        <rect key="frame" x="0.0" y="216" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett_steg2.png" id="tAp-sP-Pht">
-                                        <rect key="frame" x="220" y="216" width="100" height="149"/>
+                                        <rect key="frame" x="220" y="216" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett_steg1.png" id="mqg-z5-FWR">
-                                        <rect key="frame" x="110" y="216" width="100" height="149"/>
+                                        <rect key="frame" x="110" y="216" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tvätta_händer_steg1.png" id="wqx-3x-x37">
-                                        <rect key="frame" x="0.0" y="324" width="100" height="149"/>
+                                        <rect key="frame" x="0.0" y="324" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tvätta_händer_steg6.png" id="xqa-g5-TJ7">
-                                        <rect key="frame" x="220" y="324" width="100" height="149"/>
+                                        <rect key="frame" x="220" y="324" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tvätta_händer_steg4.png" id="jER-Ih-eL5">
-                                        <rect key="frame" x="110" y="324" width="100" height="149"/>
+                                        <rect key="frame" x="110" y="324" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
@@ -1795,7 +1795,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="P3Q-Ex-8QB" kind="modal" id="LTN-uj-odU"/>
+                                    <segue destination="xml-7O-weW" kind="push" identifier="Edit Chosen Activity" id="ZPV-lq-Of6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1813,7 +1813,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AU9-Of-Lef">
                             <connections>
-                                <segue destination="P3Q-Ex-8QB" kind="modal" id="prT-ML-b40"/>
+                                <segue destination="xml-7O-weW" kind="push" identifier="Add New Activity" id="0bh-FR-npQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1827,7 +1827,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkB-2B-pxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="xml-7O-weW" customClass="EditActivityViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="0j8-BX-sNi">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -2209,30 +2209,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <outlet property="EndSwitch" destination="j6w-TY-qN9" id="tCS-mT-2br"/>
                         <outlet property="EndingTailSwitch" destination="oNL-f0-rCD" id="xbq-Qg-s7d"/>
-                        <outlet property="NameOfActivity" destination="rMR-SC-v3t" id="Leg-LH-5Ib"/>
+                        <outlet property="NameOfActivity" destination="rMR-SC-v3t" id="gij-Sx-7qU"/>
                         <outlet property="PreparationSwitch" destination="7SQ-4z-lVX" id="uce-ef-AaR"/>
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1531" y="-1109"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DHf-Z6-WZp">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kdE-O6-Fvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="P3Q-Ex-8QB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Kwg-bw-QZ1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="xml-7O-weW" kind="relationship" relationship="rootViewController" id="cmc-Nc-NTs"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="1145" y="-1109"/>
+            <point key="canvasLocation" x="1103" y="-1109"/>
         </scene>
     </scenes>
     <resources>
@@ -2281,76 +2263,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="tvätta_händer_steg4.png" width="567" height="567"/>
         <image name="tvätta_händer_steg6.png" width="567" height="567"/>
     </resources>
-    <classes>
-        <class className="ActivitesListViewController" superclassName="CoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivitesListViewController.h"/>
-        </class>
-        <class className="ActivityPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityPickerViewController.h"/>
-        </class>
-        <class className="BackgroundPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundPickerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="CalendarSyncViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CalendarSyncViewController.h"/>
-        </class>
-        <class className="ColorPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorPickerViewController.h"/>
-        </class>
-        <class className="CoreDataTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
-        </class>
-        <class className="EditActivityViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditActivityViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="delete:"/>
-                <relationship kind="outlet" name="EndSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="EndingTailSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="NameOfActivity" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="PreparationSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="FontPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FontPickerViewController.h"/>
-        </class>
-        <class className="GalleryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GalleryViewController.h"/>
-        </class>
-        <class className="GeneralSettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneralSettingsViewController.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="timeToNextActivity" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SoundPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SoundPickerViewController.h"/>
-        </class>
-        <class className="StepsSettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsSettingsViewController.h"/>
-        </class>
-        <class className="StepsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsViewController.h"/>
-        </class>
-        <class className="TimePickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimePickerViewController.h"/>
-        </class>
-        <class className="TimelineViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimelineViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="TimelineBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="TimelineScrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="WeekdayPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeekdayPickerViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -2359,7 +2271,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <inferredMetricsTieBreakers>
         <segue reference="bN5-ic-Ppg"/>
         <segue reference="up9-Ob-gJb"/>
-        <segue reference="prT-ML-b40"/>
+        <segue reference="0bh-FR-npQ"/>
         <segue reference="WBG-Cb-cRw"/>
         <segue reference="p7v-Ek-c4b"/>
         <segue reference="tZI-zB-gE4"/>

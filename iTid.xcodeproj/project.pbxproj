@@ -59,6 +59,8 @@
 		8ACA296614F6C3FD00BC6768 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296414F6C3FC00BC6768 /* Sound.m */; };
 		8ACA296914F6C3FE00BC6768 /* Weekdays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296814F6C3FD00BC6768 /* Weekdays.m */; };
 		8ACA296A14F6C3FE00BC6768 /* Weekdays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296814F6C3FD00BC6768 /* Weekdays.m */; };
+		8ACA296D14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */; };
+		8ACA296E14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */; };
 		8AFB558414E2BA36007990F7 /* EditActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558314E2BA36007990F7 /* EditActivityViewController.m */; };
 		8AFB558514E2BA36007990F7 /* EditActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558314E2BA36007990F7 /* EditActivityViewController.m */; };
 		8AFB558914E2BB1B007990F7 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558814E2BB1B007990F7 /* MenuViewController.m */; };
@@ -195,6 +197,8 @@
 		8ACA296414F6C3FC00BC6768 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
 		8ACA296714F6C3FD00BC6768 /* Weekdays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weekdays.h; sourceTree = "<group>"; };
 		8ACA296814F6C3FD00BC6768 /* Weekdays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weekdays.m; sourceTree = "<group>"; };
+		8ACA296B14F6DE3900BC6768 /* Activity+Dummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Activity+Dummy.h"; sourceTree = "<group>"; };
+		8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Activity+Dummy.m"; sourceTree = "<group>"; };
 		8AFB558214E2BA36007990F7 /* EditActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditActivityViewController.h; sourceTree = "<group>"; };
 		8AFB558314E2BA36007990F7 /* EditActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditActivityViewController.m; sourceTree = "<group>"; };
 		8AFB558714E2BB1B007990F7 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -531,6 +535,8 @@
 				8ACA296314F6C3FC00BC6768 /* Sound.h */,
 				8ACA296414F6C3FC00BC6768 /* Sound.m */,
 				8ACA295F14F6C3FB00BC6768 /* Activity.h */,
+				8ACA296B14F6DE3900BC6768 /* Activity+Dummy.h */,
+				8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */,
 				8ACA296014F6C3FB00BC6768 /* Activity.m */,
 			);
 			name = Data;
@@ -830,6 +836,7 @@
 				8ACA296114F6C3FB00BC6768 /* Activity.m in Sources */,
 				8ACA296514F6C3FD00BC6768 /* Sound.m in Sources */,
 				8ACA296914F6C3FE00BC6768 /* Weekdays.m in Sources */,
+				8ACA296D14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +866,7 @@
 				8ACA296214F6C3FB00BC6768 /* Activity.m in Sources */,
 				8ACA296614F6C3FD00BC6768 /* Sound.m in Sources */,
 				8ACA296A14F6C3FE00BC6768 /* Weekdays.m in Sources */,
+				8ACA296E14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

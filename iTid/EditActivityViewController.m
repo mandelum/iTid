@@ -6,28 +6,63 @@
 
 #import "EditActivityViewController.h"
 
+
 @implementation EditActivityViewController
-@synthesize PreparationSwitch = _PreperationSwitch;
-@synthesize EndSwitch = _EndSwitch;
-@synthesize EndingTailSwitch = _EndingTailSwitch;
-@synthesize NameOfActivity = _NameOfActivity;
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
+@synthesize preparationSwitch = _preperationSwitch;
+@synthesize endSwitch = _endSwitch;
+@synthesize endingTailSwitch = _endingTailSwitch;
+@synthesize nameOfActivity = _nameOfActivity;
+@synthesize activity = _activity;
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+- (void)setupActivity
+{
+    NSLog(@"%@", self.nameOfActivity.text);
+    NSLog(@"%@", self.activity.name);
+    self.nameOfActivity.text = self.activity.name;
+    NSLog(@"%@", self.nameOfActivity.text);
+
 }
 
 - (IBAction)delete:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)save:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES]e
+    
+    //[self.activity.managedObjectContext performBlock:^{
+        
+    if ([self.title isEqualToString:@"Ny Aktivitet"])
+        {
+        NSLog(@"innuti ny aktivitet insertion");
+        
+        }
+    self.activity.name = self.nameOfActivity.text; 
+    NSError *error = nil;
+    [self.activity.managedObjectContext save:&error];
+    //NSLog(error);
+    
+        
+    //}];
+    [self.navigationController popViewControllerAnimated:YES];
+        
 }
 - (IBAction)cancel:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES]e
-    
+    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController dismissModalViewControllerAnimated:YES];
 }
 - (void)viewDidLoad {
-    self.NameOfActivity.delegate = self;
+    self.nameOfActivity.delegate = self;
+}
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    [self setupActivity];
 }
 - (void)viewDidUnload {
     [self setNameOfActivity:nil];
