@@ -79,7 +79,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.clearsSelectionOnViewWillAppear = YES;
     self.nameOfActivity.delegate = self;
     [self setActivity:self.activity];
     
@@ -106,10 +105,16 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+    //[self.delegate saveFrom:self withActivity:self.activity];
     [super viewDidDisappear:animated];
+}
+-(void)viewWillUnload {
+    
+    [super viewWillUnload];
 }
 
 - (void)viewDidUnload {
+    
     [self setNameOfActivity:nil];
     [self setPreparationSwitch:nil];
     [self setEndSwitch:nil];
