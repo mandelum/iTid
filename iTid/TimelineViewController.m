@@ -9,19 +9,21 @@
 @implementation TimelineViewController
 @synthesize TimelineScrollView = _TimelineScrollView;
 @synthesize TimelineBackground = _TimelineBackground;
+@synthesize sekundTimer = _sekundTimer;
+@synthesize dagsSekunder = _dagsSekunder;
 
-
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(void)updateTimeSync
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    NSDate *now = [NSDate date]; // 1
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar]; // 2
+    [calendar setTimeZone:[NSTimeZone systemTimeZone]]; // 3
+    NSDateComponents *dc = [calendar components:(NSHourCalendarUnit|NSMinuteCalendarUnit|
+                                                 NSSecondCalendarUnit) fromDate:now];  // 4
     
     
-    }
-    return self;
+    self.dagsSekunder = [dc hour] * 60 * 60 + [dc minute] * 60 + [dc second];
+    
+    [self.TimelineScrollView setContentOffset:CGPointMake(self.dagsSekunder, 0) animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,21 +48,32 @@
 {
     [super viewDidLoad];
     //[self.TimelineScrollView setScrollEnabled:YES];
-    [self.TimelineScrollView setContentSize:CGSizeMake(1000, 320)];
  
 }
 
 
 - (void)viewDidAppear:(BOOL)animated{
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    self.sekundTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                        target:self 
+                                                      selector:@selector(updateTimeSync) 
+                                                      userInfo:nil 
+                                                       repeats:YES];
+
 }
 
 - (void)viewDidUnload
-{
-    
+{    
     [self setTimelineScrollView:nil];
     [self setTimelineBackground:nil];
     [super viewDidUnload];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    
+	[super viewWillDisappear:animated];
+    [self.sekundTimer invalidate];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

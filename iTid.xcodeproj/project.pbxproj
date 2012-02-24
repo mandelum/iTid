@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A8A739114F83FB7008F1205 /* TimelineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A739014F83FB7008F1205 /* TimelineScrollView.m */; };
+		8A8A739214F83FB7008F1205 /* TimelineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A739014F83FB7008F1205 /* TimelineScrollView.m */; };
 		8AB567F014E2B47B00FAC119 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB567EF14E2B47B00FAC119 /* UIKit.framework */; };
 		8AB567F214E2B47B00FAC119 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB567F114E2B47B00FAC119 /* Foundation.framework */; };
 		8AB567F414E2B47B00FAC119 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB567F314E2B47B00FAC119 /* CoreGraphics.framework */; };
@@ -142,6 +144,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A8A738F14F83FB7008F1205 /* TimelineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineScrollView.h; sourceTree = "<group>"; };
+		8A8A739014F83FB7008F1205 /* TimelineScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineScrollView.m; sourceTree = "<group>"; };
 		8AB567EB14E2B47B00FAC119 /* iTid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB567EF14E2B47B00FAC119 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8AB567F114E2B47B00FAC119 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -499,6 +503,8 @@
 			children = (
 				8AFB558B14E2BB8E007990F7 /* TimelineViewController.h */,
 				8AFB558C14E2BB8E007990F7 /* TimelineViewController.m */,
+				8A8A738F14F83FB7008F1205 /* TimelineScrollView.h */,
+				8A8A739014F83FB7008F1205 /* TimelineScrollView.m */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -837,6 +843,7 @@
 				8ACA296514F6C3FD00BC6768 /* Sound.m in Sources */,
 				8ACA296914F6C3FE00BC6768 /* Weekdays.m in Sources */,
 				8ACA296D14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */,
+				8A8A739114F83FB7008F1205 /* TimelineScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,6 +874,7 @@
 				8ACA296614F6C3FD00BC6768 /* Sound.m in Sources */,
 				8ACA296A14F6C3FE00BC6768 /* Weekdays.m in Sources */,
 				8ACA296E14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */,
+				8A8A739214F83FB7008F1205 /* TimelineScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
