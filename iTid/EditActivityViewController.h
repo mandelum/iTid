@@ -8,7 +8,7 @@
 #import "ActivitesListViewController.h"
 #import "Activity.h"
 
-@interface EditActivityViewController : UITableViewController <UITextFieldDelegate>
+@interface EditActivityViewController : UITableViewController <UITextFieldDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameOfActivity;
 @property (weak, nonatomic) IBOutlet UISwitch *preparationSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *endSwitch;
@@ -18,6 +18,9 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField;
 -(void)setupActivity;
 -(IBAction)delete:(id)sender;
+-(IBAction)showActionSheet:(id)sender;
+
+
 
 
 

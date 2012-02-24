@@ -34,13 +34,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iTid/EditActivityViewController.m"
-         timestampString = "351789350.610215"
+         timestampString = "351795206.115304"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "75"
-         endingLineNumber = "75"
-         landmarkName = "@implementation EditActivityViewController"
-         landmarkType = "3">
+         startingLineNumber = "97"
+         endingLineNumber = "97"
+         landmarkName = "-viewWillAppear:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iTid/EditActivityViewController.m"
-         timestampString = "351787019.118309"
+         timestampString = "351794750.988504"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "-save:"
          landmarkType = "5">
       </FileBreakpoint>

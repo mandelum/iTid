@@ -30,11 +30,31 @@
     NSLog(@"%@", self.nameOfActivity.text);
 
 }
+-(IBAction)showActionSheet:(id)sender {
+	
+	
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+	if (buttonIndex == 0) {
+		[self.navigationController popViewControllerAnimated:YES];
+        [self.activity.managedObjectContext deleteObject:self.activity];
+        NSError *error = nil;
+        [self.activity.managedObjectContext save:&error];
+	} else if (buttonIndex == 1) {
+		NSLog(@"cancel");
+	} 		
+}
 
 - (IBAction)delete:(id)sender {
+    UIActionSheet *popupQuery = [[UIActionSheet alloc] initWithTitle:@"Döda mig!!!" delegate:self cancelButtonTitle:@"kanske inte" destructiveButtonTitle:@"DÖÖÖÖD!!!" otherButtonTitles: nil];
+	popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+	[popupQuery showFromTabBar:self.tabBarController.tabBar];
     
-    [self.navigationController popViewControllerAnimated:YES];
 }
+
+
+
 - (IBAction)save:(id)sender {
     
     //[self.activity.managedObjectContext performBlock:^{
@@ -47,6 +67,7 @@
     self.activity.name = self.nameOfActivity.text; 
     NSError *error = nil;
     [self.activity.managedObjectContext save:&error];
+    //[self.delegate save:activity];
     //NSLog(error);
     
         
@@ -58,7 +79,8 @@
     if ([self.title isEqualToString:@"Ny Aktivitet"])
         {
         [self.activity.managedObjectContext deleteObject:self.activity];
-        
+        NSError *error = nil;
+        [self.activity.managedObjectContext save:&error];
         }
     
     [self.navigationController popViewControllerAnimated:YES];
