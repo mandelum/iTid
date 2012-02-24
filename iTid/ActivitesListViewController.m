@@ -34,11 +34,6 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
@@ -74,26 +69,17 @@
     
     }];
      
-//     [document.managedObjectContext performBlock:^{
-//        
-//        [document saveToURL:document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:NULL];
-//    }
-     
 }
 
 
 
 - (void)useDocument
 {
-    //NSLog(@"hej usedocument");       
-    //[self fillDatabaseWithDummyStuff:self.activityDataBase];      ???
     if (![[NSFileManager defaultManager] fileExistsAtPath:[self.activityDataBase.fileURL path]]) {
         // does not exist on disk, so create it
         [self.activityDataBase saveToURL:self.activityDataBase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
             [self setupFetchedResultsController];
             [self fillDatabaseWithDummyStuff:self.activityDataBase];
-            //[self fetchFlickrDataIntoDocument:self.photoDatabase];
-            
         }];
     } else if (self.activityDataBase.documentState == UIDocumentStateClosed) {
         // exists on disk, but we need to open it

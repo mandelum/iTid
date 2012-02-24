@@ -30,10 +30,6 @@
     NSLog(@"%@", self.nameOfActivity.text);
 
 }
--(IBAction)showActionSheet:(id)sender {
-	
-	
-}
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (buttonIndex == 0) {
@@ -49,7 +45,7 @@
 - (IBAction)delete:(id)sender {
     UIActionSheet *popupQuery = [[UIActionSheet alloc] initWithTitle:@"Döda mig!!!" delegate:self cancelButtonTitle:@"kanske inte" destructiveButtonTitle:@"DÖÖÖÖD!!!" otherButtonTitles: nil];
 	popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
-	[popupQuery showFromTabBar:self.tabBarController.tabBar];
+	[popupQuery showInView:self.view];
     
 }
 
@@ -57,7 +53,6 @@
 
 - (IBAction)save:(id)sender {
     
-    //[self.activity.managedObjectContext performBlock:^{
         
     if ([self.title isEqualToString:@"Ny Aktivitet"])
         {
@@ -68,10 +63,6 @@
     NSError *error = nil;
     [self.activity.managedObjectContext save:&error];
     //[self.delegate save:activity];
-    //NSLog(error);
-    
-        
-    //}];
     [self.navigationController popViewControllerAnimated:YES];
         
 }
@@ -84,7 +75,6 @@
         }
     
     [self.navigationController popViewControllerAnimated:YES];
-    //[self.navigationController dismissModalViewControllerAnimated:YES];
 }
 - (void)viewDidLoad {
     self.nameOfActivity.delegate = self;
@@ -105,11 +95,10 @@
     [self setEndingTailSwitch:nil];
     [super viewDidUnload];
 }
-    //
+    // --- Att Göra i denna controller: ----
     //Prepare for seque 
-    //bakåt, där all info committas
+    //bakåt, där all info committas/savas !!!
     //
-
     //Implement Delegate methods that get´s called in their prepareforseque
     //Icon GalleryPicker sends back the correct icon url or database identifier
     //SoundPicker sends back it´s chosen soundtitle/identifier
