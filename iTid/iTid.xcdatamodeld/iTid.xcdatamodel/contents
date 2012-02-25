@@ -1,22 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1170" systemVersion="11D50b" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="sound" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Sound" inverseName="activity" inverseEntity="Sound" syncable="YES"/>
-        <relationship name="weekdays" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Weekdays" inverseName="activity" inverseEntity="Weekdays" syncable="YES"/>
+        <relationship name="end" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Timepoint" inverseName="endActivity" inverseEntity="Timepoint" syncable="YES"/>
+        <relationship name="icon" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Icon" inverseName="activity" inverseEntity="Icon" syncable="YES"/>
+        <relationship name="preparation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Timepoint" inverseName="preparationActivity" inverseEntity="Timepoint" syncable="YES"/>
+        <relationship name="start" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Timepoint" inverseName="startActivity" inverseEntity="Timepoint" syncable="YES"/>
+        <relationship name="stepSequence" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Step" inverseName="inActivity" inverseEntity="Step" syncable="YES"/>
+        <relationship name="tail" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Timepoint" inverseName="tailActivity" inverseEntity="Timepoint" syncable="YES"/>
+        <relationship name="weekdays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Weekday" inverseName="activity" inverseEntity="Weekday" syncable="YES"/>
+    </entity>
+    <entity name="Background" representedClassName="Background" syncable="YES">
+        <relationship name="image" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="background" inverseEntity="Image" syncable="YES"/>
+        <relationship name="settings" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Settings" inverseName="background" inverseEntity="Settings" syncable="YES"/>
+    </entity>
+    <entity name="Icon" representedClassName="Icon" syncable="YES">
+        <relationship name="activity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="icon" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="image" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="icon" inverseEntity="Image" syncable="YES"/>
+    </entity>
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="background" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Background" inverseName="image" inverseEntity="Background" syncable="YES"/>
+        <relationship name="icon" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Icon" inverseName="image" inverseEntity="Icon" syncable="YES"/>
+        <relationship name="step" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Step" inverseName="image" inverseEntity="Step" syncable="YES"/>
+    </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES">
+        <attribute name="analogWatch" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="digitalWatch" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="textEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="background" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Background" inverseName="settings" inverseEntity="Background" syncable="YES"/>
+        <relationship name="typeface" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Typeface" inverseName="settings" inverseEntity="Typeface" syncable="YES"/>
     </entity>
     <entity name="Sound" representedClassName="Sound" syncable="YES">
         <attribute name="sounddataurl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="activity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="sound" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="timepoint" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Timepoint" inverseName="sound" inverseEntity="Timepoint" syncable="YES"/>
     </entity>
-    <entity name="Weekdays" representedClassName="Weekdays" syncable="YES">
-        <attribute name="weekdays" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Step" representedClassName="Step" syncable="YES">
+        <attribute name="instruction" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="image" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="step" inverseEntity="Image" syncable="YES"/>
+        <relationship name="inActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="stepSequence" inverseEntity="Activity" syncable="YES"/>
+    </entity>
+    <entity name="Timepoint" representedClassName="Timepoint" syncable="YES">
+        <attribute name="alarm" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="endActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="end" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="preparationActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="preparation" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="sound" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Sound" inverseName="timepoint" inverseEntity="Sound" syncable="YES"/>
+        <relationship name="startActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="start" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="tailActivity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="tail" inverseEntity="Activity" syncable="YES"/>
+    </entity>
+    <entity name="Typeface" representedClassName="Typeface" syncable="YES">
+        <relationship name="settings" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Settings" inverseName="typeface" inverseEntity="Settings" syncable="YES"/>
+    </entity>
+    <entity name="Weekday" representedClassName="Weekdays" syncable="YES">
+        <attribute name="weekday" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="activity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="weekdays" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <elements>
         <element name="Activity" positionX="-3240" positionY="-564" width="128" height="90"/>
         <element name="Sound" positionX="-2999" positionY="-594" width="128" height="90"/>
-        <element name="Weekdays" positionX="-3105" positionY="-540" width="128" height="45"/>
+        <element name="Weekday" positionX="-3240" positionY="-156" width="128" height="75"/>
+        <element name="Icon" positionX="-2970" positionY="-339" width="128" height="75"/>
+        <element name="Step" positionX="-2972" positionY="-234" width="128" height="90"/>
+        <element name="Timepoint" positionX="-3125" positionY="-399" width="128" height="165"/>
+        <element name="Image" positionX="-2801" positionY="-378" width="128" height="120"/>
+        <element name="Settings" positionX="-3132" positionY="-648" width="128" height="120"/>
+        <element name="Background" positionX="-2963" positionY="-432" width="128" height="75"/>
+        <element name="Typeface" positionX="-2936" positionY="-564" width="128" height="60"/>
     </elements>
 </model>

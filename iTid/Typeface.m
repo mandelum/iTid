@@ -1,18 +1,17 @@
 //
-//  Weekdays.m
+//  Typeface.m
 //  iTid
 //
 //  Created by Robin Brandt on 2012-02-25.
 //  Copyright (c) 2012 Hypno Abstract. All rights reserved.
 //
 
-#import "Weekdays.h"
-#import "Activity.h"
+#import "Typeface.h"
+#import "Settings.h"
 
 
-@implementation Weekdays
+@implementation Typeface
 
-@dynamic weekday;
-@dynamic activity;
+@dynamic settings;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  Weekdays.h
+//  Background.h
 //  iTid
 //
 //  Created by Robin Brandt on 2012-02-25.
@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Activity;
+@class Image, Settings;
 
-@interface Weekdays : NSManagedObject
+@interface Background : NSManagedObject
 
-@property (nonatomic, retain) NSString * weekday;
-@property (nonatomic, retain) Activity *activity;
+@property (nonatomic, retain) Image *image;
+@property (nonatomic, retain) Settings *settings;
 
 @end
