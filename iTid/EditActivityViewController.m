@@ -23,15 +23,7 @@
 {
     
 }
-- (void)setActivity:(Activity *)activity
-{
-    NSLog(@"%@", self.nameOfActivity.text);
-    NSLog(@"%@", activity.name);
-    _activity = activity;
-    self.nameOfActivity.text = activity.name;
-    NSLog(@"%@", self.nameOfActivity.text);
 
-}
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (buttonIndex == 0) {
@@ -80,7 +72,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.nameOfActivity.delegate = self;
-    [self setActivity:self.activity];
+    self.nameOfActivity.text = self.activity.name;
     
 }
 -(void)viewWillAppear:(BOOL)animated {

@@ -61,15 +61,15 @@
         <relationship name="activity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="weekdays" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activity" positionX="-3240" positionY="-564" width="128" height="90"/>
-        <element name="Sound" positionX="-2999" positionY="-594" width="128" height="90"/>
-        <element name="Weekday" positionX="-3240" positionY="-156" width="128" height="75"/>
+        <element name="Activity" positionX="-3321" positionY="-558" width="128" height="180"/>
+        <element name="Sound" positionX="-2963" positionY="-594" width="128" height="90"/>
+        <element name="Weekday" positionX="-3024" positionY="-396" width="128" height="75"/>
         <element name="Icon" positionX="-2970" positionY="-339" width="128" height="75"/>
         <element name="Step" positionX="-2972" positionY="-234" width="128" height="90"/>
         <element name="Timepoint" positionX="-3125" positionY="-399" width="128" height="165"/>
         <element name="Image" positionX="-2801" positionY="-378" width="128" height="120"/>
         <element name="Settings" positionX="-3132" positionY="-648" width="128" height="120"/>
         <element name="Background" positionX="-2963" positionY="-432" width="128" height="75"/>
-        <element name="Typeface" positionX="-2936" positionY="-564" width="128" height="60"/>
+        <element name="Typeface" positionX="-2963" positionY="-501" width="128" height="60"/>
     </elements>
 </model>
