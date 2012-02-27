@@ -38,9 +38,13 @@
 }
 */
 
-- (UIImage*)resizingImagewithimagename:(UIImage *)inImage Length:(CGFloat)length
+-(IBAction)selectIcon:(id)sender 
 {
-    
+    NSLog(@"%@",sender);
+}
+
+- (UIImage *)resizingImagewithimagename:(UIImage *)inImage Length:(CGFloat)length
+{
     UIGraphicsBeginImageContext(CGSizeMake(length,length));
     
     [inImage drawInRect: CGRectMake(0, 0, length, length)];
@@ -54,15 +58,22 @@
 -(UIButton *)getButtonRowSize:(int)_rowsize Count:(int)_count currentPos:(int)_pos
 {
     UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
+    
     [button setFrame:CGRectMake((_pos%_rowsize)*((320-(_rowsize+1)*IMAGEGAP)/_rowsize)+(_pos%_rowsize +1)*IMAGEGAP,(_pos/_rowsize)*((320-(_rowsize+1)*IMAGEGAP)/_rowsize)+(_pos/_rowsize +1)*IMAGEGAP,((320-(_rowsize+1)*IMAGEGAP)/_rowsize),((320-(_rowsize+1)*IMAGEGAP)/_rowsize))];
+    
+    //_pos index of a icon from database
     [button setBackgroundImage:[self resizingImagewithimagename:[UIImage imageNamed:@"aktiviteter.png"] Length:((320-(_rowsize+1)*IMAGEGAP)/_rowsize)] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(selectIcon:) forControlEvents:UIControlEventTouchUpInside];
+
+    
     return button;
 }
 
 
 -(void)getButtonRowSize:(int)_rowsize Count:(int)_count
 {
-    [self.scrollView setFrame:CGRectMake(0, 0, 320, 480)];
+    //[self.scrollView setFrame:CGRectMake(0, 0, 320, 480)];
+    
     [self.scrollView setContentSize:CGSizeMake(320,((320-_rowsize*IMAGEGAP)/_rowsize)*(_count/_rowsize +1)+(_count/_rowsize)*IMAGEGAP)];
     for(int i=0;i<_count;i++)
         {
@@ -75,7 +86,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self getButtonRowSize:3 Count:40];
+    //fetch and do inital load of images into database
+    [self getButtonRowSize:3 Count:40]; // ger correct count from database
 }
 
 
