@@ -10,3 +10,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeToNextActivity;
 
 @end
+

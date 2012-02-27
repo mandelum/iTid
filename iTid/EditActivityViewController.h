@@ -7,13 +7,14 @@
 #import <UIKit/UIKit.h>
 //#import "ActivitesListViewController.h"
 #import "Activity.h"
+#import "GalleryViewController.h"
 @class EditActivityViewController;
 @protocol EditActivityDelegate <NSObject>
 
 -(void)saveFrom:(EditActivityViewController *)delegator withActivity:(Activity *)activity;	
 
 @end
-@interface EditActivityViewController : UITableViewController <UITextFieldDelegate, UIActionSheetDelegate>
+@interface EditActivityViewController : UITableViewController <UITextFieldDelegate, UIActionSheetDelegate, GalleryViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameOfActivity;
 @property (weak, nonatomic) IBOutlet UISwitch *preparationSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *endSwitch;
