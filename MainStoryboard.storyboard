@@ -1197,32 +1197,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="5r8-3z-mrO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arbete.png" id="Dx5-nO-WtL">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="149"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dusch.png" id="tlb-ua-kAd">
-                                        <rect key="frame" x="220" y="0.0" width="100" height="149"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="buss.png" id="eLs-8i-H3O">
-                                        <rect key="frame" x="110" y="0.0" width="100" height="149"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="toalett.png" id="9gZ-cE-z67">
-                                        <rect key="frame" x="0.0" y="108" width="100" height="149"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mote.png" id="46L-Fm-9aU">
-                                        <rect key="frame" x="220" y="108" width="100" height="149"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="frukost_middag_kvell.png" id="pdA-an-dF0">
-                                        <rect key="frame" x="110" y="108" width="100" height="149"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1230,6 +1204,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Aktivitetsikoner" id="ET9-Im-RVS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vIl-SC-XP4"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="5r8-3z-mrO" id="dlM-iZ-qT3"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1127" y="-1691"/>
@@ -2088,7 +2065,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="googlecloud.png" width="1024" height="1024"/>
         <image name="kläder_steg5.png" width="567" height="567"/>
         <image name="menybg.png" width="640" height="960"/>
-        <image name="mote.png" width="114" height="114"/>
         <image name="play.png" width="26" height="26"/>
         <image name="preferences hi.png" width="52" height="52"/>
         <image name="preferences.png" width="26" height="26"/>
@@ -2116,7 +2092,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <segue reference="bN5-ic-Ppg"/>
         <segue reference="up9-Ob-gJb"/>
         <segue reference="Pvh-H2-lCK"/>
-        <segue reference="0bh-FR-npQ"/>
+        <segue reference="ZPV-lq-Of6"/>
         <segue reference="p7v-Ek-c4b"/>
         <segue reference="tZI-zB-gE4"/>
     </inferredMetricsTieBreakers>

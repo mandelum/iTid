@@ -19,5 +19,7 @@
 @interface GalleryViewController : UIViewController
 @property (weak, nonatomic) Icon *icon;
 @property (weak, nonatomic) id <GalleryViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
+
