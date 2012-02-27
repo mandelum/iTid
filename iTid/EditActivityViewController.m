@@ -5,7 +5,8 @@
 //  Created by Robin Brandt on 2012-01-31.
 
 #import "EditActivityViewController.h"
-
+#import "Icon.h"
+#import "Image.h"
 
 @implementation EditActivityViewController
 @synthesize preparationSwitch = _preperationSwitch;
@@ -14,6 +15,10 @@
 @synthesize nameOfActivity = _nameOfActivity;
 @synthesize activity = _activity;
 @synthesize delegate = _delegate;
+
+- (void)selectedIcon:(Icon *)icon {
+    self.activity.icon = icon;
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -125,6 +130,15 @@
     //TimePicker sends a time and a BOOL if alarm is on/off
     //WeekdayPicker sends back 
     //
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"iconGallery"]) {
+        GalleryViewController *galleryViewController = segue.destinationViewController;
+        galleryViewController.delegate = self;
+        galleryViewController.icon = self.activity.icon;
+    }
+    
+}
     
 
 @end

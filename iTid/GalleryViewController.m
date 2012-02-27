@@ -7,6 +7,8 @@
 #import "GalleryViewController.h"
 
 @implementation GalleryViewController
+@synthesize icon = _icon;
+@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,6 +55,12 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"iconGallery"]) {
+        [self.delegate selectedIcon:self.icon];
+    }
 }
 
 @end
