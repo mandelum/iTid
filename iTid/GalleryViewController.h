@@ -22,6 +22,7 @@
 @property (weak, nonatomic) Activity *activity;
 @property (weak, nonatomic) id <GalleryViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) NSArray *iconArray;
 
 @end
 

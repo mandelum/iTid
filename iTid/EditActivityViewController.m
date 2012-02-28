@@ -15,9 +15,11 @@
 @synthesize nameOfActivity = _nameOfActivity;
 @synthesize activity = _activity;
 @synthesize delegate = _delegate;
+@synthesize iconView = _iconView;
 
 - (void)selectedIcon:(Icon *)icon {
     self.activity.icon = icon;
+    NSLog(@"%@", self.activity.icon);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -76,11 +78,13 @@
     [super viewDidLoad];
     self.nameOfActivity.delegate = self;
     self.nameOfActivity.text = self.activity.name;
+    self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
     
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    
+    self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
+
 
     if ([self.title isEqualToString:@"Ny Aktivitet"] && !self.nameOfActivity.text)
         {
@@ -114,6 +118,7 @@
     [self setPreparationSwitch:nil];
     [self setEndSwitch:nil];
     [self setEndingTailSwitch:nil];
+    [self setIconView:nil];
     [super viewDidUnload];
 }
     // --- Att Göra i denna controller: ----

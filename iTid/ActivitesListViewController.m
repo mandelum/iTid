@@ -70,13 +70,23 @@
 {
     [self.activityDataBase.managedObjectContext performBlock:^{
         
-        Activity *dummyActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
-        dummyActivity.name = @"lol";
+//        Activity *dummyActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+//        dummyActivity.name = @"lol";
+//        Icon *dicon = [NSEntityDescription insertNewObjectForEntityForName:@"Icon" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+//        Image *dimage = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+//        dimage.url = @"aktiviteter.png";
+//        dicon.image = dimage; 
+//        dummyActivity.icon = dicon;
         
-        Icon *icon = [NSEntityDescription insertNewObjectForEntityForName:@"Icon" inManagedObjectContext:self.activityDataBase.managedObjectContext];
-        Image *image = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:self.activityDataBase.managedObjectContext];
-        image.url = @"dusch.png";
-        icon.image = image;
+        NSArray *initialIcons = [[NSArray alloc] initWithObjects:@"dusch.png", @"frukost_middag_kvell.png", @"mote.png", @"toalett.png", @"arbete.png", @"buss.png", nil];
+        for (NSString *URL in initialIcons) {
+            Icon *icon = [NSEntityDescription insertNewObjectForEntityForName:@"Icon" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+            Image *image = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+            image.url = URL;
+            icon.image = image;
+        }
+        
+        
         
         NSLog(@"hej lol");
         
@@ -160,6 +170,8 @@
     // Configure the cell...
     Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = activity.name;
+    cell.imageView.image = [UIImage imageNamed:activity.icon.image.url]; 
+    
     //Fixa bild
     //Fixa tid(NSDate)
     //fixa cellstorleken

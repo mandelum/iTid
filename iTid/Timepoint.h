@@ -2,7 +2,7 @@
 //  Timepoint.h
 //  iTid
 //
-//  Created by Robin Brandt on 2012-02-25.
+//  Created by Hyper Island on 2/28/12.
 //  Copyright (c) 2012 Hypno Abstract. All rights reserved.
 //
 
@@ -13,13 +13,13 @@
 
 @interface Timepoint : NSManagedObject
 
-@property (nonatomic, retain) NSDate * time;
-@property (nonatomic, retain) NSNumber * enabled;
 @property (nonatomic, retain) NSNumber * alarm;
+@property (nonatomic, retain) NSNumber * enabled;
+@property (nonatomic, retain) NSDate * time;
+@property (nonatomic, retain) Activity *endActivity;
+@property (nonatomic, retain) Activity *preparationActivity;
 @property (nonatomic, retain) Sound *sound;
 @property (nonatomic, retain) Activity *startActivity;
-@property (nonatomic, retain) Activity *preparationActivity;
-@property (nonatomic, retain) Activity *endActivity;
 @property (nonatomic, retain) Activity *tailActivity;
 
 @end

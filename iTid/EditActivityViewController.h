@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *endingTailSwitch;
 @property (strong, nonatomic) Activity *activity;
 @property (weak, nonatomic) id <EditActivityDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField;
 -(IBAction)delete:(id)sender;

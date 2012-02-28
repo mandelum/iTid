@@ -2,7 +2,7 @@
 //  Weekdays.m
 //  iTid
 //
-//  Created by Robin Brandt on 2012-02-25.
+//  Created by Hyper Island on 2/28/12.
 //  Copyright (c) 2012 Hypno Abstract. All rights reserved.
 //
 

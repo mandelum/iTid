@@ -7,28 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A4FB60714FD3363001A190D /* Typeface.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB60614FD3363001A190D /* Typeface.m */; };
+		4A4FB60A14FD3363001A190D /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB60914FD3363001A190D /* Image.m */; };
+		4A4FB60D14FD3364001A190D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB60C14FD3364001A190D /* Settings.m */; };
+		4A4FB61014FD3364001A190D /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB60F14FD3364001A190D /* Sound.m */; };
+		4A4FB61314FD3364001A190D /* Timepoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61214FD3364001A190D /* Timepoint.m */; };
+		4A4FB61614FD3364001A190D /* Weekdays.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61514FD3364001A190D /* Weekdays.m */; };
+		4A4FB61914FD3364001A190D /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61814FD3364001A190D /* Step.m */; };
+		4A4FB61C14FD3365001A190D /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61B14FD3364001A190D /* Activity.m */; };
+		4A4FB61F14FD3365001A190D /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61E14FD3365001A190D /* Background.m */; };
+		4A4FB62214FD3365001A190D /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB62114FD3365001A190D /* Icon.m */; };
 		8A8A739114F83FB7008F1205 /* TimelineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A739014F83FB7008F1205 /* TimelineScrollView.m */; };
 		8A8A739214F83FB7008F1205 /* TimelineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A739014F83FB7008F1205 /* TimelineScrollView.m */; };
-		8A8F5BFD14F9933E0042E9FB /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5BFC14F9933E0042E9FB /* Settings.m */; };
-		8A8F5BFE14F9933E0042E9FB /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5BFC14F9933E0042E9FB /* Settings.m */; };
-		8A8F5C0114F9933F0042E9FB /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C0014F9933E0042E9FB /* Background.m */; };
-		8A8F5C0214F9933F0042E9FB /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C0014F9933E0042E9FB /* Background.m */; };
-		8A8F5C0514F9933F0042E9FB /* Typeface.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C0414F9933F0042E9FB /* Typeface.m */; };
-		8A8F5C0614F9933F0042E9FB /* Typeface.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C0414F9933F0042E9FB /* Typeface.m */; };
-		8A8F5C0914F9933F0042E9FB /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C0814F9933F0042E9FB /* Sound.m */; };
-		8A8F5C0A14F9933F0042E9FB /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C0814F9933F0042E9FB /* Sound.m */; };
-		8A8F5C0D14F993400042E9FB /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C0C14F9933F0042E9FB /* Icon.m */; };
-		8A8F5C0E14F993400042E9FB /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C0C14F9933F0042E9FB /* Icon.m */; };
-		8A8F5C1114F993400042E9FB /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C1014F993400042E9FB /* Step.m */; };
-		8A8F5C1214F993400042E9FB /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C1014F993400042E9FB /* Step.m */; };
-		8A8F5C1514F993400042E9FB /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C1414F993400042E9FB /* Activity.m */; };
-		8A8F5C1614F993400042E9FB /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C1414F993400042E9FB /* Activity.m */; };
-		8A8F5C1914F993410042E9FB /* Weekdays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C1814F993410042E9FB /* Weekdays.m */; };
-		8A8F5C1A14F993410042E9FB /* Weekdays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C1814F993410042E9FB /* Weekdays.m */; };
-		8A8F5C1D14F993410042E9FB /* Timepoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C1C14F993410042E9FB /* Timepoint.m */; };
-		8A8F5C1E14F993410042E9FB /* Timepoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C1C14F993410042E9FB /* Timepoint.m */; };
-		8A8F5C2114F993410042E9FB /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C2014F993410042E9FB /* Image.m */; };
-		8A8F5C2214F993410042E9FB /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F5C2014F993410042E9FB /* Image.m */; };
 		8AB567F014E2B47B00FAC119 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB567EF14E2B47B00FAC119 /* UIKit.framework */; };
 		8AB567F214E2B47B00FAC119 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB567F114E2B47B00FAC119 /* Foundation.framework */; };
 		8AB567F414E2B47B00FAC119 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB567F314E2B47B00FAC119 /* CoreGraphics.framework */; };
@@ -156,28 +146,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A4FB60514FD3363001A190D /* Typeface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typeface.h; sourceTree = "<group>"; };
+		4A4FB60614FD3363001A190D /* Typeface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Typeface.m; sourceTree = "<group>"; };
+		4A4FB60814FD3363001A190D /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		4A4FB60914FD3363001A190D /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		4A4FB60B14FD3363001A190D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		4A4FB60C14FD3364001A190D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		4A4FB60E14FD3364001A190D /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		4A4FB60F14FD3364001A190D /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		4A4FB61114FD3364001A190D /* Timepoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timepoint.h; sourceTree = "<group>"; };
+		4A4FB61214FD3364001A190D /* Timepoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timepoint.m; sourceTree = "<group>"; };
+		4A4FB61414FD3364001A190D /* Weekdays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weekdays.h; sourceTree = "<group>"; };
+		4A4FB61514FD3364001A190D /* Weekdays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weekdays.m; sourceTree = "<group>"; };
+		4A4FB61714FD3364001A190D /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
+		4A4FB61814FD3364001A190D /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
+		4A4FB61A14FD3364001A190D /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		4A4FB61B14FD3364001A190D /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		4A4FB61D14FD3365001A190D /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		4A4FB61E14FD3365001A190D /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
+		4A4FB62014FD3365001A190D /* Icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
+		4A4FB62114FD3365001A190D /* Icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
 		8A8A738F14F83FB7008F1205 /* TimelineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineScrollView.h; sourceTree = "<group>"; };
 		8A8A739014F83FB7008F1205 /* TimelineScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineScrollView.m; sourceTree = "<group>"; };
-		8A8F5BFB14F9933E0042E9FB /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		8A8F5BFC14F9933E0042E9FB /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
-		8A8F5BFF14F9933E0042E9FB /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
-		8A8F5C0014F9933E0042E9FB /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
-		8A8F5C0314F9933F0042E9FB /* Typeface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typeface.h; sourceTree = "<group>"; };
-		8A8F5C0414F9933F0042E9FB /* Typeface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Typeface.m; sourceTree = "<group>"; };
-		8A8F5C0714F9933F0042E9FB /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
-		8A8F5C0814F9933F0042E9FB /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
-		8A8F5C0B14F9933F0042E9FB /* Icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
-		8A8F5C0C14F9933F0042E9FB /* Icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
-		8A8F5C0F14F993400042E9FB /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
-		8A8F5C1014F993400042E9FB /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
-		8A8F5C1314F993400042E9FB /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
-		8A8F5C1414F993400042E9FB /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
-		8A8F5C1714F993410042E9FB /* Weekdays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weekdays.h; sourceTree = "<group>"; };
-		8A8F5C1814F993410042E9FB /* Weekdays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weekdays.m; sourceTree = "<group>"; };
-		8A8F5C1B14F993410042E9FB /* Timepoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timepoint.h; sourceTree = "<group>"; };
-		8A8F5C1C14F993410042E9FB /* Timepoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timepoint.m; sourceTree = "<group>"; };
-		8A8F5C1F14F993410042E9FB /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
-		8A8F5C2014F993410042E9FB /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 		8AB567EB14E2B47B00FAC119 /* iTid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB567EF14E2B47B00FAC119 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8AB567F114E2B47B00FAC119 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -554,29 +544,29 @@
 		8ABD5A5114E2C05F00C87395 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4A4FB62014FD3365001A190D /* Icon.h */,
+				4A4FB62114FD3365001A190D /* Icon.m */,
+				4A4FB61D14FD3365001A190D /* Background.h */,
+				4A4FB61E14FD3365001A190D /* Background.m */,
+				4A4FB61A14FD3364001A190D /* Activity.h */,
+				4A4FB61B14FD3364001A190D /* Activity.m */,
+				4A4FB61714FD3364001A190D /* Step.h */,
+				4A4FB61814FD3364001A190D /* Step.m */,
+				4A4FB61414FD3364001A190D /* Weekdays.h */,
+				4A4FB61514FD3364001A190D /* Weekdays.m */,
+				4A4FB61114FD3364001A190D /* Timepoint.h */,
+				4A4FB61214FD3364001A190D /* Timepoint.m */,
+				4A4FB60E14FD3364001A190D /* Sound.h */,
+				4A4FB60F14FD3364001A190D /* Sound.m */,
+				4A4FB60B14FD3363001A190D /* Settings.h */,
+				4A4FB60C14FD3364001A190D /* Settings.m */,
+				4A4FB60814FD3363001A190D /* Image.h */,
+				4A4FB60914FD3363001A190D /* Image.m */,
+				4A4FB60514FD3363001A190D /* Typeface.h */,
+				4A4FB60614FD3363001A190D /* Typeface.m */,
 				8ACA294F14F6C3AB00BC6768 /* CoreDataTableViewController.h */,
 				8ACA295014F6C3AB00BC6768 /* CoreDataTableViewController.m */,
 				8AB5680314E2B47B00FAC119 /* iTid.xcdatamodeld */,
-				8A8F5C1F14F993410042E9FB /* Image.h */,
-				8A8F5C2014F993410042E9FB /* Image.m */,
-				8A8F5C1B14F993410042E9FB /* Timepoint.h */,
-				8A8F5C1C14F993410042E9FB /* Timepoint.m */,
-				8A8F5C1714F993410042E9FB /* Weekdays.h */,
-				8A8F5C1814F993410042E9FB /* Weekdays.m */,
-				8A8F5C1314F993400042E9FB /* Activity.h */,
-				8A8F5C1414F993400042E9FB /* Activity.m */,
-				8A8F5C0F14F993400042E9FB /* Step.h */,
-				8A8F5C1014F993400042E9FB /* Step.m */,
-				8A8F5C0B14F9933F0042E9FB /* Icon.h */,
-				8A8F5C0C14F9933F0042E9FB /* Icon.m */,
-				8A8F5C0714F9933F0042E9FB /* Sound.h */,
-				8A8F5C0814F9933F0042E9FB /* Sound.m */,
-				8A8F5C0314F9933F0042E9FB /* Typeface.h */,
-				8A8F5C0414F9933F0042E9FB /* Typeface.m */,
-				8A8F5BFF14F9933E0042E9FB /* Background.h */,
-				8A8F5C0014F9933E0042E9FB /* Background.m */,
-				8A8F5BFB14F9933E0042E9FB /* Settings.h */,
-				8A8F5BFC14F9933E0042E9FB /* Settings.m */,
 				8ACA296B14F6DE3900BC6768 /* Activity+Dummy.h */,
 				8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */,
 			);
@@ -876,16 +866,16 @@
 				8ACA295114F6C3AB00BC6768 /* CoreDataTableViewController.m in Sources */,
 				8ACA296D14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */,
 				8A8A739114F83FB7008F1205 /* TimelineScrollView.m in Sources */,
-				8A8F5BFD14F9933E0042E9FB /* Settings.m in Sources */,
-				8A8F5C0114F9933F0042E9FB /* Background.m in Sources */,
-				8A8F5C0514F9933F0042E9FB /* Typeface.m in Sources */,
-				8A8F5C0914F9933F0042E9FB /* Sound.m in Sources */,
-				8A8F5C0D14F993400042E9FB /* Icon.m in Sources */,
-				8A8F5C1114F993400042E9FB /* Step.m in Sources */,
-				8A8F5C1514F993400042E9FB /* Activity.m in Sources */,
-				8A8F5C1914F993410042E9FB /* Weekdays.m in Sources */,
-				8A8F5C1D14F993410042E9FB /* Timepoint.m in Sources */,
-				8A8F5C2114F993410042E9FB /* Image.m in Sources */,
+				4A4FB60714FD3363001A190D /* Typeface.m in Sources */,
+				4A4FB60A14FD3363001A190D /* Image.m in Sources */,
+				4A4FB60D14FD3364001A190D /* Settings.m in Sources */,
+				4A4FB61014FD3364001A190D /* Sound.m in Sources */,
+				4A4FB61314FD3364001A190D /* Timepoint.m in Sources */,
+				4A4FB61614FD3364001A190D /* Weekdays.m in Sources */,
+				4A4FB61914FD3364001A190D /* Step.m in Sources */,
+				4A4FB61C14FD3365001A190D /* Activity.m in Sources */,
+				4A4FB61F14FD3365001A190D /* Background.m in Sources */,
+				4A4FB62214FD3365001A190D /* Icon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,16 +903,6 @@
 				8ACA295214F6C3AB00BC6768 /* CoreDataTableViewController.m in Sources */,
 				8ACA296E14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */,
 				8A8A739214F83FB7008F1205 /* TimelineScrollView.m in Sources */,
-				8A8F5BFE14F9933E0042E9FB /* Settings.m in Sources */,
-				8A8F5C0214F9933F0042E9FB /* Background.m in Sources */,
-				8A8F5C0614F9933F0042E9FB /* Typeface.m in Sources */,
-				8A8F5C0A14F9933F0042E9FB /* Sound.m in Sources */,
-				8A8F5C0E14F993400042E9FB /* Icon.m in Sources */,
-				8A8F5C1214F993400042E9FB /* Step.m in Sources */,
-				8A8F5C1614F993400042E9FB /* Activity.m in Sources */,
-				8A8F5C1A14F993410042E9FB /* Weekdays.m in Sources */,
-				8A8F5C1E14F993410042E9FB /* Timepoint.m in Sources */,
-				8A8F5C2214F993410042E9FB /* Image.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

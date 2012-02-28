@@ -2,7 +2,7 @@
 //  Image.h
 //  iTid
 //
-//  Created by Robin Brandt on 2012-02-25.
+//  Created by Hyper Island on 2/28/12.
 //  Copyright (c) 2012 Hypno Abstract. All rights reserved.
 //
 
@@ -13,10 +13,18 @@
 
 @interface Image : NSManagedObject
 
+@property (nonatomic, retain) id data;
 @property (nonatomic, retain) NSString * url;
-@property (nonatomic, retain) NSData * data;
 @property (nonatomic, retain) Background *background;
-@property (nonatomic, retain) Icon *icon;
+@property (nonatomic, retain) NSSet *icon;
 @property (nonatomic, retain) Step *step;
+@end
+
+@interface Image (CoreDataGeneratedAccessors)
+
+- (void)addIconObject:(Icon *)value;
+- (void)removeIconObject:(Icon *)value;
+- (void)addIcon:(NSSet *)values;
+- (void)removeIcon:(NSSet *)values;
 
 @end

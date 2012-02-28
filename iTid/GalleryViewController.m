@@ -12,6 +12,7 @@
 @synthesize activity = _activity;
 @synthesize delegate = _delegate;
 @synthesize scrollView = _scrollView;
+@synthesize iconArray = _iconArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,9 +40,14 @@
 }
 */
 
--(IBAction)selectIcon:(id)sender 
+-(IBAction)selectIcon:(UIButton *)sender 
 {
-    NSLog(@"%@",sender);
+    //UIImage *icon = [sender currentBackgroundImage];
+    Icon *selIcon = [self.iconArray objectAtIndex:sender.tag];
+    //NSLog(@"%d", [self.iconArray count]);
+    self.icon = selIcon;
+    [self.delegate selectedIcon:self.icon];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (UIImage *)resizingImagewithimagename:(UIImage *)inImage Length:(CGFloat)length
@@ -73,7 +79,10 @@
     
     //_pos index of a icon from database
     [button setBackgroundImage:[self resizingImagewithimagename:[UIImage imageNamed:icon.image.url] Length:((320-(_rowsize+1)*IMAGEGAP)/_rowsize)] forState:UIControlStateNormal];
+    button.tag = _pos;
     [button addTarget:self action:@selector(selectIcon:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
 
     
     return button;
@@ -87,7 +96,7 @@
     [self.scrollView setContentSize:CGSizeMake(320,((320-_rowsize*IMAGEGAP)/_rowsize)*(_count/_rowsize +1)+(_count/_rowsize)*IMAGEGAP)];
     for(int i=0;i<_count;i++)
         {
-        [self.scrollView addSubview:[self getButtonRowSize:_rowsize Count:_count currentPos:i withIcon:[array objectAtIndex:0] ]];
+        [self.scrollView addSubview:[self getButtonRowSize:_rowsize Count:_count currentPos:i withIcon:[array objectAtIndex:i] ]];
          
         }
 }
@@ -102,10 +111,8 @@
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Icon" ];
     
     NSError *error = nil;
-    NSArray *iconArray = [self.activity.managedObjectContext executeFetchRequest:request error:&error];
-    NSLog(@"%@", iconArray);
-    NSLog(@"%@", [[iconArray objectAtIndex:0] image]);
-    [self getButtonRowSize:3 Count:40 iconArray:iconArray]; // ger correct count from database
+    self.iconArray = [self.activity.managedObjectContext executeFetchRequest:request error:&error];
+    [self getButtonRowSize:3 Count:[self.iconArray count] iconArray:self.iconArray]; // ger correct count from database
 }
 
 
