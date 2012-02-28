@@ -6,6 +6,7 @@
 
 #import "ActivitesListViewController.h"
 #import "Activity.h"
+#import "Icon.h"
 #import "EditActivityViewController.h"
 
 @implementation ActivitesListViewController
@@ -71,6 +72,12 @@
         
         Activity *dummyActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
         dummyActivity.name = @"lol";
+        
+        Icon *icon = [NSEntityDescription insertNewObjectForEntityForName:@"Icon" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+        Image *image = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:self.activityDataBase.managedObjectContext];
+        image.url = @"dusch.png";
+        icon.image = image;
+        
         NSLog(@"hej lol");
         
         

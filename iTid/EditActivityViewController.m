@@ -134,6 +134,7 @@
         GalleryViewController *galleryViewController = segue.destinationViewController;
         galleryViewController.delegate = self;
         galleryViewController.icon = self.activity.icon;
+        galleryViewController.activity = self.activity;
     }
     
 }

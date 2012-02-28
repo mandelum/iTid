@@ -9,6 +9,7 @@
 
 @implementation GalleryViewController
 @synthesize icon = _icon;
+@synthesize activity = _activity;
 @synthesize delegate = _delegate;
 @synthesize scrollView = _scrollView;
 
@@ -55,7 +56,7 @@
     return smallImage;
 }
 
--(UIButton *)getButtonRowSize:(int)_rowsize Count:(int)_count currentPos:(int)_pos
+-(UIButton *)getButtonRowSize:(int)_rowsize Count:(int)_count currentPos:(int)_pos withIcon:(Icon *)icon
 {
     UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -71,7 +72,7 @@
                                 ((320-(_rowsize+1)*IMAGEGAP)/_rowsize))];      //height
     
     //_pos index of a icon from database
-    [button setBackgroundImage:[self resizingImagewithimagename:[UIImage imageNamed:@"aktiviteter.png"] Length:((320-(_rowsize+1)*IMAGEGAP)/_rowsize)] forState:UIControlStateNormal];
+    [button setBackgroundImage:[self resizingImagewithimagename:[UIImage imageNamed:icon.image.url] Length:((320-(_rowsize+1)*IMAGEGAP)/_rowsize)] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(selectIcon:) forControlEvents:UIControlEventTouchUpInside];
 
     
@@ -79,14 +80,15 @@
 }
 
 
--(void)getButtonRowSize:(int)_rowsize Count:(int)_count
+-(void)getButtonRowSize:(int)_rowsize Count:(int)_count iconArray:(NSArray *)array
 {
     //[self.scrollView setFrame:CGRectMake(0, 0, 320, 480)];
     
     [self.scrollView setContentSize:CGSizeMake(320,((320-_rowsize*IMAGEGAP)/_rowsize)*(_count/_rowsize +1)+(_count/_rowsize)*IMAGEGAP)];
     for(int i=0;i<_count;i++)
         {
-        [self.scrollView addSubview:[self getButtonRowSize:_rowsize Count:_count currentPos:i]];
+        [self.scrollView addSubview:[self getButtonRowSize:_rowsize Count:_count currentPos:i withIcon:[array objectAtIndex:0] ]];
+         
         }
 }
 
@@ -94,9 +96,16 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     //fetch and do inital load of images into database
-    [self getButtonRowSize:3 Count:40]; // ger correct count from database
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Icon" ];
+    
+    NSError *error = nil;
+    NSArray *iconArray = [self.activity.managedObjectContext executeFetchRequest:request error:&error];
+    NSLog(@"%@", iconArray);
+    NSLog(@"%@", [[iconArray objectAtIndex:0] image]);
+    [self getButtonRowSize:3 Count:40 iconArray:iconArray]; // ger correct count from database
 }
 
 
