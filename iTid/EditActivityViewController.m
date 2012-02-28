@@ -7,8 +7,13 @@
 #import "EditActivityViewController.h"
 #import "Icon.h"
 #import "Image.h"
+#import "Activity.h"
+@interface EditActivityViewController()
+@property (strong, nonatomic) Activity *tempActivity;
+@end
 
 @implementation EditActivityViewController
+
 @synthesize preparationSwitch = _preperationSwitch;
 @synthesize endSwitch = _endSwitch;
 @synthesize endingTailSwitch = _endingTailSwitch;
@@ -16,10 +21,13 @@
 @synthesize activity = _activity;
 @synthesize delegate = _delegate;
 @synthesize iconView = _iconView;
+@synthesize tempActivity = _tempActivity;
 
 - (void)selectedIcon:(Icon *)icon {
+    //self.tempActivity.icon = icon;
+    //self.iconView.image = [UIImage imageNamed:self.tempActivity.icon.image.url];
     self.activity.icon = icon;
-    NSLog(@"%@", self.activity.icon);
+    self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -49,7 +57,7 @@
 
     
 }
-
+/*
 - (IBAction)save:(id)sender {
     
         
@@ -58,7 +66,7 @@
         NSLog(@"innuti ny aktivitet insertion");
         
         }
-    
+    //self.activity = [self.tempActivity copy];
     self.activity.name = self.nameOfActivity.text;
     [self.delegate saveFrom:self withActivity:self.activity];
     [self.navigationController popViewControllerAnimated:YES];
@@ -73,16 +81,18 @@
         }
     
     [self.navigationController popViewControllerAnimated:YES];
-}
+}*/
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //self.tempActivity = [self.activity copy];
     self.nameOfActivity.delegate = self;
     self.nameOfActivity.text = self.activity.name;
-    self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
+        //self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
     
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    
     self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
 
 
@@ -100,6 +110,9 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    self.activity.name = self.nameOfActivity.text;
+    [self.delegate saveFrom:self withActivity:self.activity];
+    NSLog(@"lol");
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -135,6 +148,7 @@
     //
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
     if ([segue.identifier isEqualToString:@"iconGallery"]) {
         GalleryViewController *galleryViewController = segue.destinationViewController;
         galleryViewController.delegate = self;

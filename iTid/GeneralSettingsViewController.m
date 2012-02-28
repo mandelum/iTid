@@ -9,6 +9,10 @@
 
 @implementation GeneralSettingsViewController
 
+- (IBAction)menuButton:(UIBarButtonItem *)sender {
+    [[self navigationController] dismissModalViewControllerAnimated:YES];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
