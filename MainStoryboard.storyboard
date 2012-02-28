@@ -1193,6 +1193,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tidpunkt" id="npC-Lq-qF2"/>
+                    <connections>
+                        <outlet property="alarmSwitch" destination="MYg-hd-eoe" id="eRK-LM-5gE"/>
+                        <outlet property="soundNameLabel" destination="lDG-KJ-vOH" id="Ob3-ho-I1J"/>
+                        <outlet property="timePicker" destination="dLt-Ab-Wx9" id="IOl-SW-4QU"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1614" y="-1109"/>
@@ -1832,7 +1837,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="09:15" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" id="XJz-Fu-0YS">
-                                                    <rect key="frame" x="75" y="23" width="71" height="18"/>
+                                                    <rect key="frame" x="75" y="23" width="116" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1851,7 +1856,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="pUr-2d-Bh6" kind="push" id="f7J-X7-FHD"/>
+                                            <segue destination="pUr-2d-Bh6" kind="push" identifier="preparation" id="f7J-X7-FHD"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gtd-ah-4Wm">
@@ -2040,11 +2045,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </tableView>
                     <navigationItem key="navigationItem" title="Aktivitet" id="Nn1-ux-Kik"/>
                     <connections>
-                        <outlet property="EndSwitch" destination="j6w-TY-qN9" id="tCS-mT-2br"/>
-                        <outlet property="EndingTailSwitch" destination="oNL-f0-rCD" id="xbq-Qg-s7d"/>
-                        <outlet property="NameOfActivity" destination="rMR-SC-v3t" id="gij-Sx-7qU"/>
-                        <outlet property="PreparationSwitch" destination="7SQ-4z-lVX" id="uce-ef-AaR"/>
+                        <outlet property="endSwitch" destination="j6w-TY-qN9" id="ufy-Y9-Ewn"/>
+                        <outlet property="endTimeAndAlarm" destination="HeD-cK-Za2" id="jhu-mg-PrV"/>
                         <outlet property="iconView" destination="GYo-KH-I1z" id="3Qx-nb-HuE"/>
+                        <outlet property="nameOfActivity" destination="rMR-SC-v3t" id="yPU-V5-fbc"/>
+                        <outlet property="preparationSwitch" destination="7SQ-4z-lVX" id="zqU-uC-Dcu"/>
+                        <outlet property="preparationTimeAndAlarm" destination="XJz-Fu-0YS" id="XeV-wc-c6c"/>
+                        <outlet property="startTimeAndAlarm" destination="x4w-S6-gUZ" id="omg-pN-evy"/>
+                        <outlet property="tailSwitch" destination="oNL-f0-rCD" id="h9L-15-Uwk"/>
+                        <outlet property="tailTimeAndAlarm" destination="ISe-rC-06Z" id="0lE-m0-fJ5"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -2093,83 +2102,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="tvätta_händer_steg4.png" width="567" height="567"/>
         <image name="tvätta_händer_steg6.png" width="567" height="567"/>
     </resources>
-    <classes>
-        <class className="ActivitesListViewController" superclassName="CoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivitesListViewController.h"/>
-        </class>
-        <class className="ActivityPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityPickerViewController.h"/>
-        </class>
-        <class className="BackgroundPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundPickerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="CalendarSyncViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CalendarSyncViewController.h"/>
-        </class>
-        <class className="ColorPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorPickerViewController.h"/>
-        </class>
-        <class className="CoreDataTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
-        </class>
-        <class className="EditActivityViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditActivityViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="delete:"/>
-                <relationship kind="outlet" name="endSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="endingTailSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="iconView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameOfActivity" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="preparationSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="FontPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FontPickerViewController.h"/>
-        </class>
-        <class className="GalleryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GalleryViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="GeneralSettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneralSettingsViewController.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="timeToNextActivity" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SoundPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SoundPickerViewController.h"/>
-        </class>
-        <class className="StepsSettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsSettingsViewController.h"/>
-        </class>
-        <class className="StepsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsViewController.h"/>
-        </class>
-        <class className="TimePickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimePickerViewController.h"/>
-        </class>
-        <class className="TimelineScrollView" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimelineScrollView.h"/>
-        </class>
-        <class className="TimelineViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimelineViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="TimelineBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="TimelineScrollView" candidateClass="TimelineScrollView"/>
-            </relationships>
-        </class>
-        <class className="WeekdayPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeekdayPickerViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -2179,7 +2111,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <segue reference="up9-Ob-gJb"/>
         <segue reference="bN5-ic-Ppg"/>
         <segue reference="ZPV-lq-Of6"/>
-        <segue reference="p7v-Ek-c4b"/>
+        <segue reference="f7J-X7-FHD"/>
         <segue reference="tZI-zB-gE4"/>
         <segue reference="cfh-Iu-56S"/>
     </inferredMetricsTieBreakers>

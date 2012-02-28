@@ -8,6 +8,13 @@
 
 
 @implementation TimePickerViewController
+@synthesize timePoint = _timePoint;
+@synthesize timePicker = _timePicker;
+@synthesize alarmSwitch = _alarm;
+@synthesize soundNameLabel = _soundNameLabel;
+@synthesize delegate = _delegate;
+@synthesize type = _type;
+@synthesize activity = _activity;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -41,6 +48,9 @@
 
 - (void)viewDidUnload
 {
+    [self setTimePicker:nil];
+    [self setAlarmSwitch:nil];
+    [self setSoundNameLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -49,6 +59,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    if(self.timePoint){
+        self.timePicker.date = self.timePoint.time;
+        self.alarmSwitch.on = [self.timePoint.alarm boolValue];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -59,6 +73,11 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    if(!self.timePoint)self.timePoint = [NSEntityDescription insertNewObjectForEntityForName:(@"Timepoint") inManagedObjectContext:self.activity.managedObjectContext];
+    self.timePoint.time = self.timePicker.date;
+    self.timePoint.alarm = [NSNumber numberWithBool:self.alarmSwitch.on];
+    
+    [self.delegate thisTime:self.timePoint with:self.type fromMe:self];
 }
 
 - (void)viewDidDisappear:(BOOL)animated

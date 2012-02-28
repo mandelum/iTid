@@ -8,20 +8,35 @@
 #import "Icon.h"
 #import "Image.h"
 #import "Activity.h"
+#import "TimePickerViewController.h"
 @interface EditActivityViewController()
-@property (strong, nonatomic) Activity *tempActivity;
+
 @end
 
 @implementation EditActivityViewController
 
 @synthesize preparationSwitch = _preperationSwitch;
+@synthesize preparationTimeAndAlarm = _preparationTimeAndAlarm;
+@synthesize startTimeAndAlarm = _startTimeAndAlarm;
 @synthesize endSwitch = _endSwitch;
-@synthesize endingTailSwitch = _endingTailSwitch;
+@synthesize endTimeAndAlarm = _endTimeAndAlarm;
+@synthesize tailSwitch = _tailSwitch;
+@synthesize tailTimeAndAlarm = _tailTimeAndAlarm;
 @synthesize nameOfActivity = _nameOfActivity;
 @synthesize activity = _activity;
 @synthesize delegate = _delegate;
 @synthesize iconView = _iconView;
-@synthesize tempActivity = _tempActivity;
+
+-(void)thisTime:(Timepoint *)timePoint with:(NSString *)type fromMe:(id)sender
+{
+    
+    if([type isEqualToString:@"preparation"])
+        {
+            self.activity.preparation = timePoint;
+        
+        }
+    
+}
 
 - (void)selectedIcon:(Icon *)icon {
     //self.tempActivity.icon = icon;
@@ -46,12 +61,11 @@
         [self.activity.managedObjectContext deleteObject:self.activity];
         [self.delegate saveFrom:self withActivity:self.activity];
 	} else if (buttonIndex == 1) {
-		NSLog(@"cancel");
 	} 		
 }
 
 - (IBAction)delete:(id)sender {
-    UIActionSheet *popupQuery = [[UIActionSheet alloc] initWithTitle:@"Döda mig!!!" delegate:self cancelButtonTitle:@"kanske inte" destructiveButtonTitle:@"DÖÖÖÖD!!!" otherButtonTitles: nil];
+    UIActionSheet *popupQuery = [[UIActionSheet alloc] initWithTitle:@"Ta bort den här aktiviteten?" delegate:self cancelButtonTitle:@"Tillbaka" destructiveButtonTitle:@"Ta bort!" otherButtonTitles: nil];
 	popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
 	[popupQuery showInView:self.view];
 
@@ -94,7 +108,21 @@
     [super viewWillAppear:YES];
     
     self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
-
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    timeFormat.timeStyle = NSDateFormatterShortStyle;
+    timeFormat.dateStyle = NSDateFormatterNoStyle;
+    NSString *alarmOn = nil;
+    NSLog(@"%@", self.activity.preparation.alarm);
+    if([self.activity.preparation.alarm boolValue])
+        {
+        alarmOn = @" Larm";
+        }
+    else {
+        alarmOn = @" ";
+    }
+        
+    self.preparationTimeAndAlarm.text = [[timeFormat stringFromDate:self.activity.preparation.time] stringByAppendingString:alarmOn];
+    
 
     if ([self.title isEqualToString:@"Ny Aktivitet"] && !self.nameOfActivity.text)
         {
@@ -112,7 +140,6 @@
     [super viewWillDisappear:animated];
     self.activity.name = self.nameOfActivity.text;
     [self.delegate saveFrom:self withActivity:self.activity];
-    NSLog(@"lol");
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -130,8 +157,12 @@
     [self setNameOfActivity:nil];
     [self setPreparationSwitch:nil];
     [self setEndSwitch:nil];
-    [self setEndingTailSwitch:nil];
+    [self setTailSwitch:nil];
     [self setIconView:nil];
+    [self setPreparationTimeAndAlarm:nil];
+    [self setStartTimeAndAlarm:nil];
+    [self setEndTimeAndAlarm:nil];
+    [self setTailTimeAndAlarm:nil];
     [super viewDidUnload];
 }
     // --- Att Göra i denna controller: ----
@@ -155,6 +186,17 @@
         galleryViewController.icon = self.activity.icon;
         galleryViewController.activity = self.activity;
     }
+    
+    else if([segue.identifier isEqualToString:@"preparation"]){
+        TimePickerViewController *TPVC = segue.destinationViewController;
+        TPVC.timePoint = self.activity.preparation;
+        TPVC.type = @"preparation";
+        TPVC.delegate = self;
+        TPVC.activity = self.activity;
+        
+        
+    }
+    
     
 }
     

@@ -43,6 +43,7 @@
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [super viewDidLoad];
+    self.tableView.rowHeight = 84;
 
 }
 
@@ -164,13 +165,21 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
     Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    //cell.s
     cell.textLabel.text = activity.name;
     cell.imageView.image = [UIImage imageNamed:activity.icon.image.url]; 
+    
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    timeFormat.timeStyle = NSDateFormatterShortStyle;
+    timeFormat.dateStyle = NSDateFormatterNoStyle;
+    
+    cell.detailTextLabel.text = [timeFormat stringFromDate:activity.preparation.time];
     
     //Fixa bild
     //Fixa tid(NSDate)
