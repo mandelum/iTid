@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="F5x-xh-QlZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2177" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="F5x-xh-QlZ">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1173"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller - MenuStart-->
         <scene sceneID="qSR-dU-SP8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGP-0W-aK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,6 +102,7 @@
             </objects>
             <point key="canvasLocation" x="-588" y="-96"/>
         </scene>
+        <!--Timeline View Controller-->
         <scene sceneID="zfw-A1-m2h">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqZ-Wd-5hJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,6 +169,7 @@
             </objects>
             <point key="canvasLocation" x="292" y="64"/>
         </scene>
+        <!--General Settings View Controller - Inställningar-->
         <scene sceneID="XrM-Pv-RF7">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyl-84-CRx" sceneMemberID="firstResponder"/>
@@ -269,7 +272,7 @@
                                         <rect key="frame" x="0.0" y="187" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="jWz-Pj-Jiq">
@@ -323,7 +326,7 @@
                                         <rect key="frame" x="0.0" y="297" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Typsnitt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="oFF-FT-snr">
@@ -448,6 +451,7 @@
             </objects>
             <point key="canvasLocation" x="252" y="-729"/>
         </scene>
+        <!--Font Picker View Controller - Typsnitt-->
         <scene sceneID="XoB-ND-zNl">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7f-I0-3Bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -530,6 +534,7 @@
             </objects>
             <point key="canvasLocation" x="1872" y="-541"/>
         </scene>
+        <!--Background Picker View Controller - Bakgrunder-->
         <scene sceneID="9uc-Md-kyF">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBN-6W-RP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -556,6 +561,7 @@
             </objects>
             <point key="canvasLocation" x="1114" y="-533"/>
         </scene>
+        <!--Calendar Sync View Controller - Kalender Sync-->
         <scene sceneID="hyl-Y8-2Gd">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfc-yA-FDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -632,6 +638,7 @@
             </objects>
             <point key="canvasLocation" x="2263" y="-541"/>
         </scene>
+        <!--Weekday Picker View Controller-->
         <scene sceneID="s81-3G-lO4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v81-NH-OGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -789,6 +796,7 @@
             </objects>
             <point key="canvasLocation" x="2401" y="-1109"/>
         </scene>
+        <!--Steps Settings View Controller - Steg för steg redigering-->
         <scene sceneID="LPV-j3-i22">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pre-eW-lkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -957,6 +965,7 @@
             </objects>
             <point key="canvasLocation" x="1491" y="-1691"/>
         </scene>
+        <!--Color Picker View Controller - Välj Aktivitetsfärg-->
         <scene sceneID="QGk-bq-LIx">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1w-XI-Wee" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -977,6 +986,7 @@
             </objects>
             <point key="canvasLocation" x="665" y="-1691"/>
         </scene>
+        <!--Sound Picker View Controller - Ljud-->
         <scene sceneID="9qk-Hf-5TB">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUi-vp-htM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1081,6 +1091,7 @@
             </objects>
             <point key="canvasLocation" x="2263" y="-1691"/>
         </scene>
+        <!--Time Picker View Controller - Tidpunkt-->
         <scene sceneID="DcF-IA-xbN">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLA-Bj-7id" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1148,7 +1159,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="271" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Ljud" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Woa-Ia-Bkb">
@@ -1186,6 +1197,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1614" y="-1109"/>
         </scene>
+        <!--Gallery View Controller - Aktivitetsikoner-->
         <scene sceneID="MVg-wn-VNX">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWZ-gd-5aG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1211,6 +1223,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1127" y="-1691"/>
         </scene>
+        <!--Activity Picker View Controller - Aktiviteter-->
         <scene sceneID="ROH-Ea-VY5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBV-E2-ZIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1394,6 +1407,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="653" y="619"/>
         </scene>
+        <!--Steps View Controller-->
         <scene sceneID="asE-On-qaz">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKJ-5D-9hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1450,6 +1464,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1053" y="619"/>
         </scene>
+        <!--Navigation Controller - Inställningar-->
         <scene sceneID="qKr-1g-AGh">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9i-bE-4Td" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1469,6 +1484,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-203" y="-729"/>
         </scene>
+        <!--Gallery View Controller - Steg för steg pictogram-->
         <scene sceneID="v0M-dt-mn7">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSn-je-N0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1541,6 +1557,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1872" y="-1691"/>
         </scene>
+        <!--Navigation Controller - Redigera Aktiviteter-->
         <scene sceneID="dHh-iq-r7D">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z83-RK-TE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1559,6 +1576,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="237" y="619"/>
         </scene>
+        <!--Steps View Controller-->
         <scene sceneID="jka-vU-GBM">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Au-kh-BGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1615,6 +1633,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1053" y="51"/>
         </scene>
+        <!--Activites List View Controller - Aktiviteter-->
         <scene sceneID="cAI-cP-2gm">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4A-Hg-5ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1675,6 +1694,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="673" y="-1101"/>
         </scene>
+        <!--Edit Activity View Controller - Aktivitet-->
         <scene sceneID="M1S-QL-26G">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkB-2B-pxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1715,7 +1735,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="55" width="320" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="83"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Ikon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="9EN-Vm-OZi">
@@ -1741,7 +1761,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="139" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Färg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="W3T-Ur-DLo">
@@ -1838,7 +1858,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="315" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="Q57-6B-gif">
@@ -1871,7 +1891,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="359" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Slut" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="tUw-aa-4r2">
@@ -1908,7 +1928,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="0.0" y="403" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Aveckling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="41c-xI-k3t">
@@ -2083,6 +2103,82 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="tvätta_händer_steg4.png" width="567" height="567"/>
         <image name="tvätta_händer_steg6.png" width="567" height="567"/>
     </resources>
+    <classes>
+        <class className="ActivitesListViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivitesListViewController.h"/>
+        </class>
+        <class className="ActivityPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActivityPickerViewController.h"/>
+        </class>
+        <class className="BackgroundPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundPickerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="CalendarSyncViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CalendarSyncViewController.h"/>
+        </class>
+        <class className="ColorPickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorPickerViewController.h"/>
+        </class>
+        <class className="CoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
+        </class>
+        <class className="EditActivityViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditActivityViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="delete:"/>
+                <relationship kind="outlet" name="endSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="endingTailSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="nameOfActivity" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="preparationSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="FontPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FontPickerViewController.h"/>
+        </class>
+        <class className="GalleryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GalleryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="GeneralSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneralSettingsViewController.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="timeToNextActivity" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SoundPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SoundPickerViewController.h"/>
+        </class>
+        <class className="StepsSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsSettingsViewController.h"/>
+        </class>
+        <class className="StepsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsViewController.h"/>
+        </class>
+        <class className="TimePickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimePickerViewController.h"/>
+        </class>
+        <class className="TimelineScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimelineScrollView.h"/>
+        </class>
+        <class className="TimelineViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimelineViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="TimelineBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="TimelineScrollView" candidateClass="TimelineScrollView"/>
+            </relationships>
+        </class>
+        <class className="WeekdayPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeekdayPickerViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

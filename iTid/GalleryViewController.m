@@ -59,7 +59,16 @@
 {
     UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
     
-    [button setFrame:CGRectMake((_pos%_rowsize)*((320-(_rowsize+1)*IMAGEGAP)/_rowsize)+(_pos%_rowsize +1)*IMAGEGAP,(_pos/_rowsize)*((320-(_rowsize+1)*IMAGEGAP)/_rowsize)+(_pos/_rowsize +1)*IMAGEGAP,((320-(_rowsize+1)*IMAGEGAP)/_rowsize),((320-(_rowsize+1)*IMAGEGAP)/_rowsize))];
+    [button setFrame:CGRectMake(
+                                (_pos%_rowsize)*((320-(_rowsize+1)*IMAGEGAP)   //x
+                                /_rowsize)+(_pos%_rowsize +1)*IMAGEGAP,        
+                                
+                                (_pos/_rowsize)*((320-(_rowsize+1)*IMAGEGAP)   //y
+                                /_rowsize)+(_pos/_rowsize +1)*IMAGEGAP,
+                                
+                                ((320-(_rowsize+1)*IMAGEGAP)/_rowsize),        //width
+                                
+                                ((320-(_rowsize+1)*IMAGEGAP)/_rowsize))];      //height
     
     //_pos index of a icon from database
     [button setBackgroundImage:[self resizingImagewithimagename:[UIImage imageNamed:@"aktiviteter.png"] Length:((320-(_rowsize+1)*IMAGEGAP)/_rowsize)] forState:UIControlStateNormal];
