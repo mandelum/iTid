@@ -7,6 +7,14 @@
 #import "ColorPickerViewController.h"
 
 @implementation ColorPickerViewController
+@synthesize delegate = _delegate;
+@synthesize color = _color;
+
+- (IBAction)colorButton:(UIButton *)sender {
+    UIColor *color = sender.backgroundColor;
+    [self.delegate thisColor:color fromMe:self];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

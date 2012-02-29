@@ -9,13 +9,14 @@
 #import "Activity.h"
 #import "TimePickerViewController.h"
 #import "GalleryViewController.h"
+#import "ColorPickerViewController.h"
 @class EditActivityViewController;
 @protocol EditActivityDelegate <NSObject>
 
 -(void)saveFrom:(EditActivityViewController *)delegator withActivity:(Activity *)activity;	
 
 @end
-@interface EditActivityViewController : UITableViewController <UITextFieldDelegate, UIActionSheetDelegate, GalleryViewControllerDelegate, TimePickerViewControllerDelegate>
+@interface EditActivityViewController : UITableViewController <UITextFieldDelegate, UIActionSheetDelegate, GalleryViewControllerDelegate, TimePickerViewControllerDelegate, ColorPickerViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameOfActivity;
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 

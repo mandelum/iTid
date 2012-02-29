@@ -17,6 +17,17 @@
 		4A4FB61C14FD3365001A190D /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61B14FD3364001A190D /* Activity.m */; };
 		4A4FB61F14FD3365001A190D /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61E14FD3365001A190D /* Background.m */; };
 		4A4FB62214FD3365001A190D /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB62114FD3365001A190D /* Icon.m */; };
+		8A5EF1C414FE5572004209E2 /* arbete-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1B914FE5572004209E2 /* arbete-vit.png */; };
+		8A5EF1C514FE5572004209E2 /* buss-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1BA14FE5572004209E2 /* buss-vit.png */; };
+		8A5EF1C614FE5572004209E2 /* dush-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1BB14FE5572004209E2 /* dush-vit.png */; };
+		8A5EF1C714FE5572004209E2 /* klader-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1BC14FE5572004209E2 /* klader-vit.png */; };
+		8A5EF1C814FE5572004209E2 /* mat-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1BD14FE5572004209E2 /* mat-vit.png */; };
+		8A5EF1C914FE5572004209E2 /* matkasse-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1BE14FE5572004209E2 /* matkasse-vit.png */; };
+		8A5EF1CA14FE5572004209E2 /* prata-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1BF14FE5572004209E2 /* prata-vit.png */; };
+		8A5EF1CB14FE5572004209E2 /* stada-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1C014FE5572004209E2 /* stada-vit.png */; };
+		8A5EF1CC14FE5572004209E2 /* tag-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1C114FE5572004209E2 /* tag-vit.png */; };
+		8A5EF1CD14FE5572004209E2 /* tandborste-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1C214FE5572004209E2 /* tandborste-vit.png */; };
+		8A5EF1CE14FE5572004209E2 /* toalett-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1C314FE5572004209E2 /* toalett-vit.png */; };
 		8A8A739114F83FB7008F1205 /* TimelineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A739014F83FB7008F1205 /* TimelineScrollView.m */; };
 		8A8A739214F83FB7008F1205 /* TimelineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A739014F83FB7008F1205 /* TimelineScrollView.m */; };
 		8AB567F014E2B47B00FAC119 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB567EF14E2B47B00FAC119 /* UIKit.framework */; };
@@ -166,6 +177,17 @@
 		4A4FB61E14FD3365001A190D /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
 		4A4FB62014FD3365001A190D /* Icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
 		4A4FB62114FD3365001A190D /* Icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
+		8A5EF1B914FE5572004209E2 /* arbete-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arbete-vit.png"; sourceTree = "<group>"; };
+		8A5EF1BA14FE5572004209E2 /* buss-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buss-vit.png"; sourceTree = "<group>"; };
+		8A5EF1BB14FE5572004209E2 /* dush-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dush-vit.png"; sourceTree = "<group>"; };
+		8A5EF1BC14FE5572004209E2 /* klader-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "klader-vit.png"; sourceTree = "<group>"; };
+		8A5EF1BD14FE5572004209E2 /* mat-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mat-vit.png"; sourceTree = "<group>"; };
+		8A5EF1BE14FE5572004209E2 /* matkasse-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "matkasse-vit.png"; sourceTree = "<group>"; };
+		8A5EF1BF14FE5572004209E2 /* prata-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prata-vit.png"; sourceTree = "<group>"; };
+		8A5EF1C014FE5572004209E2 /* stada-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stada-vit.png"; sourceTree = "<group>"; };
+		8A5EF1C114FE5572004209E2 /* tag-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tag-vit.png"; sourceTree = "<group>"; };
+		8A5EF1C214FE5572004209E2 /* tandborste-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tandborste-vit.png"; sourceTree = "<group>"; };
+		8A5EF1C314FE5572004209E2 /* toalett-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toalett-vit.png"; sourceTree = "<group>"; };
 		8A8A738F14F83FB7008F1205 /* TimelineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineScrollView.h; sourceTree = "<group>"; };
 		8A8A739014F83FB7008F1205 /* TimelineScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineScrollView.m; sourceTree = "<group>"; };
 		8AB567EB14E2B47B00FAC119 /* iTid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +475,17 @@
 		8ABD5A4814E2BEF700C87395 /* Activity Icons */ = {
 			isa = PBXGroup;
 			children = (
+				8A5EF1B914FE5572004209E2 /* arbete-vit.png */,
+				8A5EF1BA14FE5572004209E2 /* buss-vit.png */,
+				8A5EF1BB14FE5572004209E2 /* dush-vit.png */,
+				8A5EF1BC14FE5572004209E2 /* klader-vit.png */,
+				8A5EF1BD14FE5572004209E2 /* mat-vit.png */,
+				8A5EF1BE14FE5572004209E2 /* matkasse-vit.png */,
+				8A5EF1BF14FE5572004209E2 /* prata-vit.png */,
+				8A5EF1C014FE5572004209E2 /* stada-vit.png */,
+				8A5EF1C114FE5572004209E2 /* tag-vit.png */,
+				8A5EF1C214FE5572004209E2 /* tandborste-vit.png */,
+				8A5EF1C314FE5572004209E2 /* toalett-vit.png */,
 				8AFB55BB14E2BC31007990F7 /* dusch.png */,
 				8AFB55BC14E2BC31007990F7 /* frukost_middag_kvell.png */,
 				8AFB55BD14E2BC31007990F7 /* mote.png */,
@@ -809,6 +842,17 @@
 				8AFB561114E2BC31007990F7 /* clock hi.png in Resources */,
 				8AFB561214E2BC31007990F7 /* play hi.png in Resources */,
 				8AFB561314E2BC31007990F7 /* preferences hi.png in Resources */,
+				8A5EF1C414FE5572004209E2 /* arbete-vit.png in Resources */,
+				8A5EF1C514FE5572004209E2 /* buss-vit.png in Resources */,
+				8A5EF1C614FE5572004209E2 /* dush-vit.png in Resources */,
+				8A5EF1C714FE5572004209E2 /* klader-vit.png in Resources */,
+				8A5EF1C814FE5572004209E2 /* mat-vit.png in Resources */,
+				8A5EF1C914FE5572004209E2 /* matkasse-vit.png in Resources */,
+				8A5EF1CA14FE5572004209E2 /* prata-vit.png in Resources */,
+				8A5EF1CB14FE5572004209E2 /* stada-vit.png in Resources */,
+				8A5EF1CC14FE5572004209E2 /* tag-vit.png in Resources */,
+				8A5EF1CD14FE5572004209E2 /* tandborste-vit.png in Resources */,
+				8A5EF1CE14FE5572004209E2 /* toalett-vit.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

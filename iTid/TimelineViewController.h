@@ -6,6 +6,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TimelineScrollView.h"
+#import "Icon.h"
+#import "Image.h"
+#import "Activity.h"
 
 @interface TimelineViewController : UIViewController
 
@@ -13,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *TimelineBackground;
 @property (strong, nonatomic) NSTimer *sekundTimer;
 @property (nonatomic) int dagsSekunder;
-
+@property (nonatomic, strong) UIManagedDocument *activityDataBase;
+@property (strong, nonatomic) NSArray *activities;
 @end

@@ -79,7 +79,8 @@
 //        dicon.image = dimage; 
 //        dummyActivity.icon = dicon;
         
-        NSArray *initialIcons = [[NSArray alloc] initWithObjects:@"dusch.png", @"frukost_middag_kvell.png", @"mote.png", @"toalett.png", @"arbete.png", @"buss.png", nil];
+        NSArray *initialIcons = [[NSArray alloc] initWithObjects:@"dush-vit.png", @"buss-vit.png", @"klader-vit.png", @"toalett-vit.png", @"arbete-vit.png", @"matkasse-vit.png",@"mat-vit.png",@"stada-vit.png",@"tag-vit.png",@"tandborste-vit.png", nil];
+        
         for (NSString *URL in initialIcons) {
             Icon *icon = [NSEntityDescription insertNewObjectForEntityForName:@"Icon" inManagedObjectContext:self.activityDataBase.managedObjectContext];
             Image *image = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:self.activityDataBase.managedObjectContext];
@@ -171,6 +172,7 @@
     
     //cell.s
     cell.textLabel.text = activity.name;
+    cell.imageView.backgroundColor = activity.color;
     cell.imageView.image = [UIImage imageNamed:activity.icon.image.url]; 
     
     NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
@@ -222,6 +224,7 @@
             editView.title = @"Ny Aktivitet";
             activity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:self.activityDataBase.managedObjectContext];
             editView.activity = activity;
+            editView.activity.color = [UIColor grayColor];
             
         }
         

@@ -221,6 +221,7 @@
     
     //cell.s
     cell.textLabel.text = activity.name;
+    cell.imageView.backgroundColor = activity.color;
     cell.imageView.image = [UIImage imageNamed:activity.icon.image.url]; 
     
     NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];

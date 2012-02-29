@@ -11,6 +11,40 @@
 @synthesize TimelineBackground = _TimelineBackground;
 @synthesize sekundTimer = _sekundTimer;
 @synthesize dagsSekunder = _dagsSekunder;
+@synthesize activityDataBase = _activityDataBase;
+
+-(void)setupFetch
+
+{
+    
+}
+
+- (void)useDocument
+{
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.activityDataBase.fileURL path]]) {
+        // does not exist on disk, so create it
+        [self.activityDataBase saveToURL:self.activityDataBase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
+            [self setupFetch];
+            //[self fillDatabaseWithDummyStuff:self.activityDataBase];
+        }];
+    } else if (self.activityDataBase.documentState == UIDocumentStateClosed) {
+        // exists on disk, but we need to open it
+        [self.activityDataBase openWithCompletionHandler:^(BOOL success) {
+            [self setupFetch];
+        }];
+    } else if (self.activityDataBase.documentState == UIDocumentStateNormal) {
+        // already open and ready to use
+        [self setupFetch];
+    }
+}
+
+- (void)setActivityDataBase:(UIManagedDocument *)activityDataBase
+{
+    if (_activityDataBase != activityDataBase) {
+        _activityDataBase = activityDataBase;
+        [self useDocument];
+    }
+}
 
 -(void)updateTimeSync
 {
@@ -48,6 +82,10 @@
 {
     [super viewDidLoad];
     //[self.TimelineScrollView setScrollEnabled:YES];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Activity" ];
+    
+    NSError *error = nil;
+    self.activities = [self.activityDataBase.managedObjectContext executeFetchRequest:request error:&error];
  
 }
 
