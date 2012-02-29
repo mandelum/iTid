@@ -17,6 +17,8 @@
 		4A4FB61C14FD3365001A190D /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61B14FD3364001A190D /* Activity.m */; };
 		4A4FB61F14FD3365001A190D /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB61E14FD3365001A190D /* Background.m */; };
 		4A4FB62214FD3365001A190D /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB62114FD3365001A190D /* Icon.m */; };
+		4A4FB66614FE8781001A190D /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB66314FE8781001A190D /* ClockView.m */; };
+		4A4FB66714FE8781001A190D /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FB66514FE8781001A190D /* ClockViewController.m */; };
 		8A5EF1C414FE5572004209E2 /* arbete-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1B914FE5572004209E2 /* arbete-vit.png */; };
 		8A5EF1C514FE5572004209E2 /* buss-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1BA14FE5572004209E2 /* buss-vit.png */; };
 		8A5EF1C614FE5572004209E2 /* dush-vit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5EF1BB14FE5572004209E2 /* dush-vit.png */; };
@@ -177,6 +179,10 @@
 		4A4FB61E14FD3365001A190D /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
 		4A4FB62014FD3365001A190D /* Icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
 		4A4FB62114FD3365001A190D /* Icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
+		4A4FB66214FE8781001A190D /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
+		4A4FB66314FE8781001A190D /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
+		4A4FB66414FE8781001A190D /* ClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockViewController.h; sourceTree = "<group>"; };
+		4A4FB66514FE8781001A190D /* ClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockViewController.m; sourceTree = "<group>"; };
 		8A5EF1B914FE5572004209E2 /* arbete-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arbete-vit.png"; sourceTree = "<group>"; };
 		8A5EF1BA14FE5572004209E2 /* buss-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buss-vit.png"; sourceTree = "<group>"; };
 		8A5EF1BB14FE5572004209E2 /* dush-vit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dush-vit.png"; sourceTree = "<group>"; };
@@ -548,6 +554,10 @@
 		8ABD5A4E14E2BFEB00C87395 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
+				4A4FB66214FE8781001A190D /* ClockView.h */,
+				4A4FB66314FE8781001A190D /* ClockView.m */,
+				4A4FB66414FE8781001A190D /* ClockViewController.h */,
+				4A4FB66514FE8781001A190D /* ClockViewController.m */,
 				8AFB558B14E2BB8E007990F7 /* TimelineViewController.h */,
 				8AFB558C14E2BB8E007990F7 /* TimelineViewController.m */,
 				8A8A738F14F83FB7008F1205 /* TimelineScrollView.h */,
@@ -920,6 +930,8 @@
 				4A4FB61C14FD3365001A190D /* Activity.m in Sources */,
 				4A4FB61F14FD3365001A190D /* Background.m in Sources */,
 				4A4FB62214FD3365001A190D /* Icon.m in Sources */,
+				4A4FB66614FE8781001A190D /* ClockView.m in Sources */,
+				4A4FB66714FE8781001A190D /* ClockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,6 +1046,7 @@
 				GCC_PREFIX_HEADER = "iTid/iTid-Prefix.pch";
 				INFOPLIST_FILE = "iTid/iTid-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1045,6 +1058,7 @@
 				GCC_PREFIX_HEADER = "iTid/iTid-Prefix.pch";
 				INFOPLIST_FILE = "iTid/iTid-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
