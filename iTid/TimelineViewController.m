@@ -12,6 +12,7 @@
 @synthesize sekundTimer = _sekundTimer;
 @synthesize dagsSekunder = _dagsSekunder;
 @synthesize activityDataBase = _activityDataBase;
+@synthesize activities = _activities;
 
 -(void)setupFetch
 
