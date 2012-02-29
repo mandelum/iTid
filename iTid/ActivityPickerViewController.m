@@ -5,9 +5,54 @@
 //  Created by Robin Brandt on 2012-02-08.
 
 #import "ActivityPickerViewController.h"
+#import "Activity.h"
+#import "Icon.h"
+#import "Timepoint.h"
+#import "Image.h"
 
 
 @implementation ActivityPickerViewController
+@synthesize activityDataBase = _activityDataBase;
+
+- (void)setupFetchedResultsController // attaches an NSFetchRequest to this UITableViewController
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Activity"];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"start.time" ascending:YES]];
+    // Lägg till sort by date
+    // no predicate because we want ALL the Activites
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                        managedObjectContext:self.activityDataBase.managedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+}
+
+- (void)useDocument
+{
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.activityDataBase.fileURL path]]) {
+        // does not exist on disk, so create it
+        [self.activityDataBase saveToURL:self.activityDataBase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
+            [self setupFetchedResultsController];
+            //[self fillDatabaseWithDummyStuff:self.activityDataBase];
+        }];
+    } else if (self.activityDataBase.documentState == UIDocumentStateClosed) {
+        // exists on disk, but we need to open it
+        [self.activityDataBase openWithCompletionHandler:^(BOOL success) {
+            [self setupFetchedResultsController];
+        }];
+    } else if (self.activityDataBase.documentState == UIDocumentStateNormal) {
+        // already open and ready to use
+        [self setupFetchedResultsController];
+    }
+}
+
+- (void)setActivityDataBase:(UIManagedDocument *)activityDataBase
+{
+    if (_activityDataBase != activityDataBase) {
+        _activityDataBase = activityDataBase;
+        [self useDocument];
+    }
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,6 +76,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.rowHeight = 139;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -49,7 +95,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    if (!self.activityDataBase) {  // for demo purposes, we'll create a default database if none is set
+        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        url = [url URLByAppendingPathComponent:@"Default Activity Database"];
+        // url is now "<Documents Directory>/Default Photo Database"
+        self.activityDataBase = [[UIManagedDocument alloc] initWithFileURL:url]; // setter will create this for us on disk
+    }
 }
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -153,5 +206,31 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Activity Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell...
+    Activity *activity = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    //cell.s
+    cell.textLabel.text = activity.name;
+    cell.imageView.image = [UIImage imageNamed:activity.icon.image.url]; 
+    
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    timeFormat.timeStyle = NSDateFormatterShortStyle;
+    timeFormat.dateStyle = NSDateFormatterNoStyle;
+    
+    cell.detailTextLabel.text = [timeFormat stringFromDate:activity.preparation.time];
+    
+    return cell;
+}
+
 
 @end

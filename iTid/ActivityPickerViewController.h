@@ -5,7 +5,8 @@
 //  Created by Robin Brandt on 2012-02-08.
 
 #import <UIKit/UIKit.h>
-
-@interface ActivityPickerViewController : UITableViewController
+#import "CoreDataTableViewController.h"
+@interface ActivityPickerViewController : CoreDataTableViewController
+@property (nonatomic, strong) UIManagedDocument *activityDataBase;
 
 @end

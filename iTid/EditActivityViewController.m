@@ -32,9 +32,21 @@
     
     if([type isEqualToString:@"preparation"])
         {
-            self.activity.preparation = timePoint;
-        
+        self.activity.preparation = timePoint;
         }
+    else if([type isEqualToString:@"start"])
+        {
+        self.activity.start = timePoint;
+        }
+    else if([type isEqualToString:@"end"])
+        {
+        self.activity.end = timePoint;
+        }
+    else if([type isEqualToString:@"tail"])
+        {
+        self.activity.tail = timePoint;
+        }
+        
     
 }
 
@@ -68,40 +80,40 @@
     UIActionSheet *popupQuery = [[UIActionSheet alloc] initWithTitle:@"Ta bort den här aktiviteten?" delegate:self cancelButtonTitle:@"Tillbaka" destructiveButtonTitle:@"Ta bort!" otherButtonTitles: nil];
 	popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
 	[popupQuery showInView:self.view];
-
+    
     
 }
 /*
-- (IBAction)save:(id)sender {
-    
-        
-    if ([self.title isEqualToString:@"Ny Aktivitet"])
-        {
-        NSLog(@"innuti ny aktivitet insertion");
-        
-        }
-    //self.activity = [self.tempActivity copy];
-    self.activity.name = self.nameOfActivity.text;
-    [self.delegate saveFrom:self withActivity:self.activity];
-    [self.navigationController popViewControllerAnimated:YES];
-        
-}
-- (IBAction)cancel:(id)sender {
-    if ([self.title isEqualToString:@"Ny Aktivitet"])
-        {
-        [self.activity.managedObjectContext deleteObject:self.activity];
-        [self.delegate saveFrom:self withActivity:self.activity];
-
-        }
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}*/
+ - (IBAction)save:(id)sender {
+ 
+ 
+ if ([self.title isEqualToString:@"Ny Aktivitet"])
+ {
+ NSLog(@"innuti ny aktivitet insertion");
+ 
+ }
+ //self.activity = [self.tempActivity copy];
+ self.activity.name = self.nameOfActivity.text;
+ [self.delegate saveFrom:self withActivity:self.activity];
+ [self.navigationController popViewControllerAnimated:YES];
+ 
+ }
+ - (IBAction)cancel:(id)sender {
+ if ([self.title isEqualToString:@"Ny Aktivitet"])
+ {
+ [self.activity.managedObjectContext deleteObject:self.activity];
+ [self.delegate saveFrom:self withActivity:self.activity];
+ 
+ }
+ 
+ [self.navigationController popViewControllerAnimated:YES];
+ }*/
 - (void)viewDidLoad {
     [super viewDidLoad];
     //self.tempActivity = [self.activity copy];
     self.nameOfActivity.delegate = self;
     self.nameOfActivity.text = self.activity.name;
-        //self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
+    //self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
     
 }
 -(void)viewWillAppear:(BOOL)animated {
@@ -112,18 +124,20 @@
     timeFormat.timeStyle = NSDateFormatterShortStyle;
     timeFormat.dateStyle = NSDateFormatterNoStyle;
     NSString *alarmOn = nil;
-    NSLog(@"%@", self.activity.preparation.alarm);
-    if([self.activity.preparation.alarm boolValue])
-        {
-        alarmOn = @" Larm";
-        }
-    else {
-        alarmOn = @" ";
-    }
-        
+    
+    if([self.activity.preparation.alarm boolValue]) alarmOn = @" Larm"; else alarmOn = @" ";    
     self.preparationTimeAndAlarm.text = [[timeFormat stringFromDate:self.activity.preparation.time] stringByAppendingString:alarmOn];
     
-
+    if([self.activity.start.alarm boolValue]) alarmOn = @" Larm"; else alarmOn = @" ";  
+    self.startTimeAndAlarm.text = [[timeFormat stringFromDate:self.activity.start.time] stringByAppendingString:alarmOn];
+    
+    if([self.activity.end.alarm boolValue]) alarmOn = @" Larm"; else alarmOn = @" ";  
+    self.endTimeAndAlarm.text = [[timeFormat stringFromDate:self.activity.end.time] stringByAppendingString:alarmOn];
+    
+    if([self.activity.tail.alarm boolValue]) alarmOn = @" Larm"; else alarmOn = @" ";  
+    self.tailTimeAndAlarm.text = [[timeFormat stringFromDate:self.activity.tail.time] stringByAppendingString:alarmOn];
+    
+    
     if ([self.title isEqualToString:@"Ny Aktivitet"] && !self.nameOfActivity.text)
         {
         [self.nameOfActivity becomeFirstResponder];
@@ -165,40 +179,48 @@
     [self setTailTimeAndAlarm:nil];
     [super viewDidUnload];
 }
-    // --- Att Göra i denna controller: ----
-    //Prepare for seque 
-    //bakåt, där all info committas/savas !!!
-    //
-    //Implement Delegate methods that get´s called in their prepareforseque
-    //Icon GalleryPicker sends back the correct icon url or database identifier
-    //SoundPicker sends back it´s chosen soundtitle/identifier
-    //ColorPicker that sends it´s color value
-    //Step-Sequence-Picker that sends back an NSArray of steps
-    //TimePicker sends a time and a BOOL if alarm is on/off
-    //WeekdayPicker sends back 
-    //
+// --- Att Göra i denna controller: ----
+//Prepare for seque 
+//bakåt, där all info committas/savas !!!
+//
+//Implement Delegate methods that get´s called in their prepareforseque
+//Icon GalleryPicker sends back the correct icon url or database identifier
+//SoundPicker sends back it´s chosen soundtitle/identifier
+//ColorPicker that sends it´s color value
+//Step-Sequence-Picker that sends back an NSArray of steps
+//TimePicker sends a time and a BOOL if alarm is on/off
+//WeekdayPicker sends back 
+//
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
     if ([segue.identifier isEqualToString:@"iconGallery"]) {
         GalleryViewController *galleryViewController = segue.destinationViewController;
         galleryViewController.delegate = self;
         galleryViewController.icon = self.activity.icon;
         galleryViewController.activity = self.activity;
     }
-    
-    else if([segue.identifier isEqualToString:@"preparation"]){
+    else if([segue.destinationViewController isKindOfClass:[TimePickerViewController class]]) {
         TimePickerViewController *TPVC = segue.destinationViewController;
-        TPVC.timePoint = self.activity.preparation;
-        TPVC.type = @"preparation";
+        TPVC.type = segue.identifier;
         TPVC.delegate = self;
         TPVC.activity = self.activity;
-        
-        
+        if([segue.identifier isEqualToString:@"preparation"]){
+            TPVC.timePoint = self.activity.preparation;
+        }
+        else if([segue.identifier isEqualToString:@"start"]){
+            TPVC.timePoint = self.activity.start;
+        }
+        else if([segue.identifier isEqualToString:@"end"]){
+            TPVC.timePoint = self.activity.end;
+        }
+        else if([segue.identifier isEqualToString:@"tail"]){
+            TPVC.timePoint = self.activity.tail;            
+        }
     }
     
     
-}
     
+}
+
 
 @end

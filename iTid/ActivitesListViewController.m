@@ -57,7 +57,7 @@
 - (void)setupFetchedResultsController // attaches an NSFetchRequest to this UITableViewController
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Activity"];
-    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"start.time" ascending:YES]];
     // Lägg till sort by date
     // no predicate because we want ALL the Activites
     
@@ -88,8 +88,6 @@
         }
         
         
-        
-        NSLog(@"hej lol");
         
         
     [self.activityDataBase saveToURL:self.activityDataBase.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:NULL];
@@ -178,8 +176,12 @@
     NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
     timeFormat.timeStyle = NSDateFormatterShortStyle;
     timeFormat.dateStyle = NSDateFormatterNoStyle;
+    NSString *prepTime = @"";
+    NSString *startTime = @"";
+    if(activity.preparation.time)prepTime = [timeFormat stringFromDate:activity.preparation.time];
+    if(activity.start.time)startTime  = [timeFormat stringFromDate:activity.start.time];
+    cell.detailTextLabel.text = [[prepTime stringByAppendingString:@" - "] stringByAppendingString:startTime];
     
-    cell.detailTextLabel.text = [timeFormat stringFromDate:activity.preparation.time];
     
     //Fixa bild
     //Fixa tid(NSDate)
