@@ -23,13 +23,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-
-	[clockView1 release];
-    [clockView2 release];
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
