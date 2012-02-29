@@ -27,6 +27,11 @@
 @synthesize delegate = _delegate;
 @synthesize iconView = _iconView;
 
+-(void)thisColor:(UIColor *)color fromMe:(id)sender 
+{
+    self.activity.color = color;
+}
+
 -(void)thisTime:(Timepoint *)timePoint with:(NSString *)type fromMe:(id)sender
 {
     
@@ -119,6 +124,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
+    self.iconView.backgroundColor = self.activity.color;
     self.iconView.image = [UIImage imageNamed:self.activity.icon.image.url];
     NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
     timeFormat.timeStyle = NSDateFormatterShortStyle;
@@ -217,6 +223,12 @@
             TPVC.timePoint = self.activity.tail;            
         }
     }
+    else if([segue.destinationViewController isKindOfClass:[ColorPickerViewController class]])
+             {
+             ColorPickerViewController *CPVC = segue.destinationViewController;
+             CPVC.delegate = self;
+             
+             }
     
     
     
