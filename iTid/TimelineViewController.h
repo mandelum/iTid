@@ -9,8 +9,13 @@
 #import "Icon.h"
 #import "Image.h"
 #import "Activity.h"
+#import "TimeIndicator.h"
+#import "CurrentTimeIndicator.h"
+#import "ClockView.h"
 
-@interface TimelineViewController : UIViewController
+
+@interface TimelineViewController : UIViewController {
+}
 
 @property (weak, nonatomic) IBOutlet TimelineScrollView *TimelineScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *TimelineBackground;
@@ -18,4 +23,7 @@
 @property (nonatomic) int dagsSekunder;
 @property (nonatomic, strong) UIManagedDocument *activityDataBase;
 @property (strong, nonatomic) NSArray *activities;
+@property (strong,nonatomic) CurrentTimeIndicator *currentTime;
+@property (nonatomic, strong) ClockView *clockView1;
+
 @end

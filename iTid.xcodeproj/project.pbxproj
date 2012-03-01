@@ -81,6 +81,7 @@
 		8ACA296E14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */; };
 		8AE22A3814FE965D00C84C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A03BF0614FE939B0079D5A2 /* QuartzCore.framework */; };
 		8AE22A4014FEB70400C84C5D /* TimeIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE22A3F14FEB70400C84C5D /* TimeIndicator.m */; };
+		8AE22A4514FF4FA900C84C5D /* CurrentTimeIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE22A4414FF4FA900C84C5D /* CurrentTimeIndicator.m */; };
 		8AFB558414E2BA36007990F7 /* EditActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558314E2BA36007990F7 /* EditActivityViewController.m */; };
 		8AFB558514E2BA36007990F7 /* EditActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558314E2BA36007990F7 /* EditActivityViewController.m */; };
 		8AFB558914E2BB1B007990F7 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558814E2BB1B007990F7 /* MenuViewController.m */; };
@@ -251,6 +252,8 @@
 		8AE22A3F14FEB70400C84C5D /* TimeIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeIndicator.m; sourceTree = "<group>"; };
 		8AE22A4114FEEDAD00C84C5D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = /Users/mandelum/Developer/HyperMind/iTid/iTid/sv.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
 		8AE22A4214FEEDAD00C84C5D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = /Users/mandelum/Developer/HyperMind/iTid/iTidTests/sv.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
+		8AE22A4314FF4FA900C84C5D /* CurrentTimeIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTimeIndicator.h; sourceTree = "<group>"; };
+		8AE22A4414FF4FA900C84C5D /* CurrentTimeIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTimeIndicator.m; sourceTree = "<group>"; };
 		8AFB558214E2BA36007990F7 /* EditActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditActivityViewController.h; sourceTree = "<group>"; };
 		8AFB558314E2BA36007990F7 /* EditActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditActivityViewController.m; sourceTree = "<group>"; };
 		8AFB558714E2BB1B007990F7 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -569,6 +572,8 @@
 				4A4FB66514FE8781001A190D /* ClockViewController.m */,
 				8AFB558B14E2BB8E007990F7 /* TimelineViewController.h */,
 				8AFB558C14E2BB8E007990F7 /* TimelineViewController.m */,
+				8AE22A4314FF4FA900C84C5D /* CurrentTimeIndicator.h */,
+				8AE22A4414FF4FA900C84C5D /* CurrentTimeIndicator.m */,
 				8AE22A3E14FEB70400C84C5D /* TimeIndicator.h */,
 				8AE22A3F14FEB70400C84C5D /* TimeIndicator.m */,
 				8A8A738F14F83FB7008F1205 /* TimelineScrollView.h */,
@@ -944,6 +949,7 @@
 				4A4FB66614FE8781001A190D /* ClockView.m in Sources */,
 				4A4FB66714FE8781001A190D /* ClockViewController.m in Sources */,
 				8AE22A4014FEB70400C84C5D /* TimeIndicator.m in Sources */,
+				8AE22A4514FF4FA900C84C5D /* CurrentTimeIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

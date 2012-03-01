@@ -60,13 +60,26 @@
     icon.backgroundColor = self.activity.color;
     [self addSubview:icon];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startSeconds-preparationSeconds, 255, 145, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startSeconds-preparationSeconds, 253, 145, 40)];
     label.backgroundColor = [UIColor whiteColor];
     label.textColor = self.activity.color;
     label.textAlignment = UITextAlignmentCenter;
     label.text = [self.activity.name uppercaseString]; 
     label.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:20.0];
     [self addSubview:label];
+    
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    timeFormat.timeStyle = NSDateFormatterShortStyle;
+    timeFormat.dateStyle = NSDateFormatterNoStyle;
+    
+    UILabel *time = [[UILabel alloc] initWithFrame:CGRectMake(startSeconds-preparationSeconds, 70, 145, 40)];
+    time.backgroundColor = [UIColor whiteColor];
+    time.textColor = self.activity.color;
+    time.textAlignment = UITextAlignmentCenter;
+    time.text = [timeFormat stringFromDate:self.activity.start.time]; 
+    time.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:20.0];
+    [self addSubview:time];
+    
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextBeginPath(context);

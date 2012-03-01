@@ -5,17 +5,22 @@
 //  Created by Robin Brandt on 2012-02-02.
 
 #import "TimelineViewController.h"
-#import "TimeIndicator.h"
+
 #define gng 4
 //#define pls
 
+
 @implementation TimelineViewController
+
 @synthesize TimelineScrollView = _TimelineScrollView;
 @synthesize TimelineBackground = _TimelineBackground;
 @synthesize sekundTimer = _sekundTimer;
 @synthesize dagsSekunder = _dagsSekunder;
 @synthesize activityDataBase = _activityDataBase;
 @synthesize activities = _activities;
+@synthesize currentTime = _currentTime;
+@synthesize clockView1 = _clockView1;
+
 
 -(void)setupFetch
 
@@ -69,7 +74,12 @@
     
     self.dagsSekunder = ([dc hour] * 60 + [dc minute])*gng;
     
-    [self.TimelineScrollView setContentOffset:CGPointMake(self.dagsSekunder, 0) animated:YES];
+    //if(self.currentTime)self.currentTime.frame = CGRectMake(self.dagsSekunder, 0, 100, 320);
+    if(self.currentTime)self.currentTime.frame = CGRectMake(self.dagsSekunder, 0, 100, 320);
+    if(self.clockView1)self.clockView1.frame = CGRectMake(self.dagsSekunder-50, 0, 100, 100);
+
+
+    //[self.TimelineScrollView setContentOffset:CGPointMake(self.dagsSekunder, 0) animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,11 +105,7 @@
     [super viewDidLoad];
     NSLog(@"viewdidload");
     
-    for( NSString *familyName in [UIFont familyNames] ) {
-        for( NSString *fontName in [UIFont fontNamesForFamilyName:familyName] ) {
-            NSLog(@"%@", fontName);
-        }
-    }
+    
 
     if (!self.activityDataBase) {  // for demo purposes, we'll create a default database if none is set
         NSLog(@"ifself...");
@@ -109,7 +115,7 @@
         // url is now "<Documents Directory>/Default Photo Database"
         self.activityDataBase = [[UIManagedDocument alloc] initWithFileURL:url]; // setter will create this for us on disk
     }
-
+    
     
     
     //[self.TimelineScrollView setScrollEnabled:YES];
@@ -132,6 +138,14 @@
         NSDateComponents *dc = [calendar components:(NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit) fromDate:preparation];  // 4
         int preparationSeconds = ([dc hour] * 60 + [dc minute])*gng;
         
+        NSDate *start = activity.start.time; // 1
+        dc = [calendar components:(NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit) fromDate:start];  // 4
+        int startSeconds = ([dc hour] * 60 + [dc minute])*gng;
+        
+        NSDate *end = activity.end.time; // 1
+        dc = [calendar components:(NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit) fromDate:end];  // 4
+        int endSeconds = ([dc hour] * 60 + [dc minute])*gng;
+        
         NSDate *tail = activity.tail.time; // 1
         dc = [calendar components:(NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit) fromDate:tail];  // 4
         int tailSeconds = ([dc hour] * 60 + [dc minute])*gng;
@@ -141,9 +155,30 @@
         timeInd.activity = activity;
         [self.TimelineScrollView addSubview:timeInd];    
         
+        ClockView *smallClock = [[ClockView alloc]initWithFrame:CGRectMake(startSeconds+10, 0, 70, 70)];
+        smallClock.backgroundColor = [UIColor clearColor];
+        [self.TimelineScrollView addSubview:smallClock];
+        smallClock.theDate = activity.start.time;
+        [smallClock updateClock:nil];
+                                 
+        
         NSLog(@"%@", activity.name);
         
     }
+    [self updateTimeSync];
+    
+    self.currentTime = [[CurrentTimeIndicator alloc] initWithFrame:CGRectMake(self.dagsSekunder, 0, 100, 320)];
+    self.currentTime.backgroundColor = [UIColor clearColor];
+    [self.TimelineScrollView addSubview:self.currentTime];    
+   
+    self.clockView1 = [[ClockView alloc] initWithFrame:CGRectMake(self.dagsSekunder-50, 0, 100, 100)];
+	self.clockView1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.clockView1.backgroundColor = [UIColor whiteColor];
+
+    [self.TimelineScrollView addSubview:self.clockView1];
+    [self.clockView1 start];
+
+    
     /*
     for (int i=1; i<self.TimelineScrollView.contentSize.width
 ; i +=30) {
@@ -154,11 +189,13 @@
         [self.TimelineScrollView addSubview:label];
     }
     */
-     self.sekundTimer = [NSTimer scheduledTimerWithTimeInterval:10
+     self.sekundTimer = [NSTimer scheduledTimerWithTimeInterval:1
                                                         target:self 
                                                       selector:@selector(updateTimeSync) 
                                                       userInfo:nil 
                                                        repeats:YES];
+    [self.TimelineScrollView setContentOffset:CGPointMake(self.dagsSekunder-100, 0) animated:YES];
+
      
 
 }
@@ -175,6 +212,7 @@
     
 	[super viewWillDisappear:animated];
     [self.sekundTimer invalidate];
+    [self.clockView1 stop];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
