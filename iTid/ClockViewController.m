@@ -12,6 +12,7 @@
 
 @implementation ClockViewController
 
+@synthesize theView;
 @synthesize  clockView1;
 @synthesize  clockView2;
 
@@ -31,27 +32,29 @@
 
 #pragma mark - View lifecycle
 
+-(void)loadView 
+{
+    [super loadView];
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-	//Original clock images was taken from:
-
-	//ClockView with default style
+    //ClockView with default style
 	clockView1 = [[ClockView alloc] initWithFrame:CGRectMake(50, 250, 200, 200)];
 	clockView1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	[self.view addSubview:clockView1];
+    [self.theView addSubview:clockView1];
     
     clockView2 = [[ClockView alloc] initWithFrame:CGRectMake(50, 50, 200, 200)];
 	clockView2.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[self.view addSubview:clockView2];
-
+   
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 	//start the clock at current time
-
 	[clockView1 start];
     clockView2.theDate = [NSDate date];
     [clockView2 updateClock:nil];
@@ -67,6 +70,7 @@
 
 - (void)viewDidUnload
 {
+    [self setTheView:nil];
 	[super viewDidUnload];
 
 	self.clockView1 = nil;

@@ -79,6 +79,8 @@
 		8ACA295214F6C3AB00BC6768 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA295014F6C3AB00BC6768 /* CoreDataTableViewController.m */; };
 		8ACA296D14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */; };
 		8ACA296E14F6DE3A00BC6768 /* Activity+Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */; };
+		8AE22A3814FE965D00C84C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A03BF0614FE939B0079D5A2 /* QuartzCore.framework */; };
+		8AE22A4014FEB70400C84C5D /* TimeIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE22A3F14FEB70400C84C5D /* TimeIndicator.m */; };
 		8AFB558414E2BA36007990F7 /* EditActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558314E2BA36007990F7 /* EditActivityViewController.m */; };
 		8AFB558514E2BA36007990F7 /* EditActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558314E2BA36007990F7 /* EditActivityViewController.m */; };
 		8AFB558914E2BB1B007990F7 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB558814E2BB1B007990F7 /* MenuViewController.m */; };
@@ -204,7 +206,6 @@
 		8AB567F314E2B47B00FAC119 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8AB567F514E2B47B00FAC119 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8AB567F914E2B47B00FAC119 /* iTid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iTid-Info.plist"; sourceTree = "<group>"; };
-		8AB567FB14E2B47B00FAC119 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AB567FD14E2B47B00FAC119 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8AB567FF14E2B47B00FAC119 /* iTid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iTid-Prefix.pch"; sourceTree = "<group>"; };
 		8AB5680014E2B47B00FAC119 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -213,7 +214,6 @@
 		8AB5680B14E2B47B00FAC119 /* iTidTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTidTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB5680C14E2B47B00FAC119 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8AB5681514E2B47B00FAC119 /* iTidTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iTidTests-Info.plist"; sourceTree = "<group>"; };
-		8AB5681714E2B47B00FAC119 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AB5681914E2B47B00FAC119 /* iTidTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTidTests.h; sourceTree = "<group>"; };
 		8AB5681A14E2B47B00FAC119 /* iTidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTidTests.m; sourceTree = "<group>"; };
 		8AB5682414E2B52700FAC119 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -247,6 +247,10 @@
 		8ACA295014F6C3AB00BC6768 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		8ACA296B14F6DE3900BC6768 /* Activity+Dummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Activity+Dummy.h"; sourceTree = "<group>"; };
 		8ACA296C14F6DE3900BC6768 /* Activity+Dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Activity+Dummy.m"; sourceTree = "<group>"; };
+		8AE22A3E14FEB70400C84C5D /* TimeIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeIndicator.h; sourceTree = "<group>"; };
+		8AE22A3F14FEB70400C84C5D /* TimeIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeIndicator.m; sourceTree = "<group>"; };
+		8AE22A4114FEEDAD00C84C5D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = /Users/mandelum/Developer/HyperMind/iTid/iTid/sv.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
+		8AE22A4214FEEDAD00C84C5D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = /Users/mandelum/Developer/HyperMind/iTid/iTidTests/sv.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
 		8AFB558214E2BA36007990F7 /* EditActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditActivityViewController.h; sourceTree = "<group>"; };
 		8AFB558314E2BA36007990F7 /* EditActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditActivityViewController.m; sourceTree = "<group>"; };
 		8AFB558714E2BB1B007990F7 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -334,6 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE22A3814FE965D00C84C5D /* QuartzCore.framework in Frameworks */,
 				8AB5680D14E2B47B00FAC119 /* SenTestingKit.framework in Frameworks */,
 				8AB5680E14E2B47B00FAC119 /* UIKit.framework in Frameworks */,
 				8AB5680F14E2B47B00FAC119 /* Foundation.framework in Frameworks */,
@@ -347,7 +352,6 @@
 		8AB567E014E2B47B00FAC119 = {
 			isa = PBXGroup;
 			children = (
-				8A03BF0614FE939B0079D5A2 /* QuartzCore.framework */,
 				8AB567F714E2B47B00FAC119 /* iTid */,
 				8AB5681314E2B47B00FAC119 /* iTidTests */,
 				8AB567EE14E2B47B00FAC119 /* Frameworks */,
@@ -367,6 +371,7 @@
 		8AB567EE14E2B47B00FAC119 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A03BF0614FE939B0079D5A2 /* QuartzCore.framework */,
 				8AB567EF14E2B47B00FAC119 /* UIKit.framework */,
 				8AB567F114E2B47B00FAC119 /* Foundation.framework */,
 				8AB567F314E2B47B00FAC119 /* CoreGraphics.framework */,
@@ -379,10 +384,10 @@
 		8AB567F714E2B47B00FAC119 /* iTid */ = {
 			isa = PBXGroup;
 			children = (
+				8AB5682414E2B52700FAC119 /* MainStoryboard.storyboard */,
 				8AB567F814E2B47B00FAC119 /* Supporting Files */,
 				8AFB558F14E2BC00007990F7 /* Resources */,
 				8ABD5A4F14E2C01100C87395 /* App Delegate */,
-				8AB5682414E2B52700FAC119 /* MainStoryboard.storyboard */,
 				8ABD5A5014E2C04900C87395 /* Menu */,
 				8ABD5A7314E2CB9400C87395 /* Settings */,
 				8ABD5A4E14E2BFEB00C87395 /* Timeline */,
@@ -564,6 +569,8 @@
 				4A4FB66514FE8781001A190D /* ClockViewController.m */,
 				8AFB558B14E2BB8E007990F7 /* TimelineViewController.h */,
 				8AFB558C14E2BB8E007990F7 /* TimelineViewController.m */,
+				8AE22A3E14FEB70400C84C5D /* TimeIndicator.h */,
+				8AE22A3F14FEB70400C84C5D /* TimeIndicator.m */,
 				8A8A738F14F83FB7008F1205 /* TimelineScrollView.h */,
 				8A8A739014F83FB7008F1205 /* TimelineScrollView.m */,
 			);
@@ -936,6 +943,7 @@
 				4A4FB62214FD3365001A190D /* Icon.m in Sources */,
 				4A4FB66614FE8781001A190D /* ClockView.m in Sources */,
 				4A4FB66714FE8781001A190D /* ClockViewController.m in Sources */,
+				8AE22A4014FEB70400C84C5D /* TimeIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,7 +988,7 @@
 		8AB567FA14E2B47B00FAC119 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8AB567FB14E2B47B00FAC119 /* en */,
+				8AE22A4114FEEDAD00C84C5D /* sv */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -988,7 +996,7 @@
 		8AB5681614E2B47B00FAC119 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8AB5681714E2B47B00FAC119 /* en */,
+				8AE22A4214FEEDAD00C84C5D /* sv */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1002,6 +1010,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1028,6 +1037,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1073,6 +1083,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iTid.app/iTid";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -1091,6 +1102,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iTid.app/iTid";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",

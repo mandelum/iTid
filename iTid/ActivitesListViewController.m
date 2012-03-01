@@ -80,12 +80,13 @@
 //        dummyActivity.icon = dicon;
         
         NSArray *initialIcons = [[NSArray alloc] initWithObjects:@"dush-vit.png", @"buss-vit.png", @"klader-vit.png", @"toalett-vit.png", @"arbete-vit.png", @"matkasse-vit.png",@"mat-vit.png",@"stada-vit.png",@"tag-vit.png",@"tandborste-vit.png", nil];
-        
+        NSLog(@"hmm");
         for (NSString *URL in initialIcons) {
             Icon *icon = [NSEntityDescription insertNewObjectForEntityForName:@"Icon" inManagedObjectContext:self.activityDataBase.managedObjectContext];
             Image *image = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:self.activityDataBase.managedObjectContext];
             image.url = URL;
             icon.image = image;
+            NSLog(URL);
         }
         
         

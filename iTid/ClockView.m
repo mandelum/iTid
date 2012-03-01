@@ -131,8 +131,8 @@ static float Degrees2Radians(float degrees) { return degrees * M_PI / 180; }
 		w = HOURS_HAND_WIDTH;
 		h = length*HOURS_HAND_LENGTH;
 	}else{
-		w = CGImageGetWidth((__bridge_retained CGImageRef)hourHand.contents);
-		h = CGImageGetHeight((__bridge_retained CGImageRef)hourHand.contents);
+		w = CGImageGetWidth((__bridge  CGImageRef)hourHand.contents);
+		h = CGImageGetHeight((__bridge_retained  CGImageRef)hourHand.contents);
 	}
 	hourHand.bounds = CGRectMake(0,0,w,h);
 	
@@ -140,8 +140,8 @@ static float Degrees2Radians(float degrees) { return degrees * M_PI / 180; }
 		w = MIN_HAND_WIDTH;
 		h = length*MIN_HAND_LENGTH;
 	}else{
-		w = CGImageGetWidth((__bridge_retained CGImageRef)minHand.contents);
-		h = CGImageGetHeight((__bridge_retained CGImageRef)minHand.contents);
+		w = CGImageGetWidth((__bridge  CGImageRef)minHand.contents);
+		h = CGImageGetHeight((__bridge CGImageRef)minHand.contents);
 	}
 	minHand.bounds = CGRectMake(0,0,w,h);
 	
@@ -149,8 +149,8 @@ static float Degrees2Radians(float degrees) { return degrees * M_PI / 180; }
 		w = SEC_HAND_WIDTH;
 		h = length*SEC_HAND_LENGTH;
 	}else{
-		w = CGImageGetWidth((__bridge_retained CGImageRef)secHand.contents);
-		h = CGImageGetHeight((__bridge_retained CGImageRef)secHand.contents);
+		w = CGImageGetWidth((__bridge CGImageRef)secHand.contents);
+		h = CGImageGetHeight((__bridge CGImageRef)secHand.contents);
 	}
 	secHand.bounds = CGRectMake(0,0,w,h);
 
@@ -164,7 +164,10 @@ static float Degrees2Radians(float degrees) { return degrees * M_PI / 180; }
 {
 	self = [super initWithFrame:frame];
 	if (self) {
-		
+        containerLayer = [CALayer layer];
+		hourHand = [CALayer layer];
+		minHand = [CALayer layer];
+		secHand = [CALayer layer];
 
 		//default appearance
 		[self setClockBackgroundImage:NULL];

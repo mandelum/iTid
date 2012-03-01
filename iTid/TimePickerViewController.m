@@ -38,7 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    //self.timePicker.datePickerMode 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

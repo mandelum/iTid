@@ -7,14 +7,16 @@
 //
 
 #import "TimelineScrollView.h"
-
+#define gng 4
+//#define pls
 @implementation TimelineScrollView
 
 -(id)initWithCoder:(NSCoder *)aDecoder 
 {
     if ((self = [super initWithCoder:aDecoder]))
         {
-        self.contentSize = CGSizeMake(86400, 320);
+        self.contentSize = CGSizeMake(1440*gng, 320);
+        //self.contentSize = CGSizeMake(600, 320);
         
         }
     return self;
